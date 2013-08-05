@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="normal.master.cs" Inherits="normal" %>
+<%@ Register Src="Footer.ascx" TagName="Footer" TagPrefix="uc2" %>
+<%@ Register Src="Menu.ascx" TagName="Menu" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>SQL Server Array Library</title>
+    <link href="~/images/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <table class="Layout">
+        <tr>
+            <td width="100%" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+    </table>
+    <table class="Layout" bgcolor="#222339">
+        <tr>
+            <td width="150"><img runat="server" border="0" src="~/images/top1.jpg" alt="Spherical Toolkit" width="150" height="57" /></td>
+            <td width="619" style="text-align: left"><img runat="server" border="0" src="~/images/top2.jpg" alt="Spherical Toolkit" width="619" height="57" /></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+        <tr>
+            <td width="150" bgcolor="#929297"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="150" height="1" /></td>
+            <td width="619" bgcolor="#929297"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="150" height="1" /></td>
+            <td width="1" bgcolor="#929297"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+    </table>
+    <table class="Layout" bgcolor="#222339">
+        <tr>
+            <td width="150"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="150" height="16" /></td>
+            <td width="100%" align="right"><uc1:Menu ID="Menu1" runat="server" /></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+    </table>
+    <table class="Layout">
+        <tr>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="148" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="619" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+        <tr>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="148" bgcolor="#e0e0e0" style="vertical-align: top; text-align: center; padding-top: 24px"><asp:ContentPlaceHolder runat="server" ID="Left"></asp:ContentPlaceHolder></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="619" valign="top">
+                <table border="0" width="100%" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <td width="100%" align="left" style="padding: 10px;">
+                            <asp:ContentPlaceHolder runat="server" ID="Middle">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+        <tr>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="148" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="619" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+    </table>
+    <table class="Layout" bgcolor="#222339">
+        <tr>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="16" /></td>
+            <td bgcolor="#222339"><uc2:Footer ID="Footer1" runat="server" /></td>
+            <td width="1" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="16" /></td>
+        </tr>
+    </table>
+    <table class="Layout" bgcolor="#222339">
+        <tr>
+            <td width="100%" bgcolor="#000000"><img runat="server" border="0" src="~/images/x.gif" alt="-" width="1" height="1" /></td>
+        </tr>
+    </table>
+</body>
+</html>

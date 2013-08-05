@@ -1,0 +1,231 @@
+body
+{
+	font-size: 10pt;
+	color: black;
+	font-family: Arial, Helvetica, Sans-Serif;
+	overflow-y: scroll;
+}
+table.Layout
+{
+	width: 770px;
+	border: 0px;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	border-spacing: 0px;
+}
+table.Layout td, table.Layout th
+{
+	padding: 0;
+} 
+table.MenuBar
+{
+
+}
+td.MenuHeader
+{
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+a.MenuHeader
+{
+	color: #94c5f7;
+	text-decoration: none;
+}
+a.MenuHeader:hover
+{
+	color: #94c5f7;
+}
+table.Menu
+{
+	background-color: #222339;
+}
+table.MenuFrame
+{
+	background-color: #000000;
+}
+td.MenuSep
+{
+	height:1px;
+	background: #94c5f7;
+}
+td.MenuItem
+{
+	background-color: #222339;
+	color: #94c5f7;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Arial, Helvetica, Sans-Serif;	
+	padding-left: 15px;
+}
+td.MenuItemHover
+{
+	background-color: #94c5f7;
+	color:#222339;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family: Arial, Helvetica, Sans-Serif;	
+	padding-left: 16px;
+}
+a.MenuItem
+{
+	color: #94c5f7;
+	text-decoration: none;
+}
+a.MenuItem:hover
+{
+	color: #222339;
+	text-decoration: none;
+}
+img.MenuTick
+{
+	border: 0px;
+	vertical-align: top;
+}
+td.Footer, td.Status
+{
+	font-size: 8pt;
+	color: #94c5f7;
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+a.Footer
+{
+    color: #94c5f7;
+}
+a
+{
+	color: #E80000;
+	text-decoration : none;
+}
+a:hover
+{
+	color: #FF3300;
+	text-decoration : underline;
+}
+p, li
+{
+	font-size: 10pt;
+	color: black;
+	font-family: Arial, Helvetica, Sans-Serif;
+}
+em
+{
+    font-size: 10pt;
+    color: #0000AA;
+    font-style: normal;
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-weight: normal;
+}
+code
+{
+    color: #0000AA;
+}
+h2
+{
+	font-weight: bold;
+	font-size: 12pt;
+	color: #0000AA;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+h3
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+h4
+{
+	font-weight: bold;
+	font-size: 12pt;
+	color: #005500;
+	font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+table.Form
+{
+	width:80%;
+	text-align:center;
+}
+td.FormLabel
+{
+	width:30%;
+	text-align:left;
+	font-size: 10pt;
+	color: black;
+	font-family: Arial, Helvetica, Sans-Serif;	
+}
+td.FormField, textarea.FormField
+{
+	width:70%;
+	text-align:left;
+	font-size: 12pt;
+	color: black;
+	font-family: Arial, Helvetica, Sans-Serif;	
+}
+td.FormButton
+{
+	text-align:center;
+}
+input.FormField, textarea.FormField
+{
+	width:100%
+}
+input.FormFieldNarrow,select.FormFieldNarrow
+{
+	width:40%
+}
+input.FormButton
+{
+	width: 100px;
+}
+td.ListCell
+{
+	font-family: Arial, Helvetica;
+	font-size: 9pt;	
+	background: #FFFFFF;
+}
+td.ListCellColored
+{
+	font-family: Arial, Helvetica;
+	font-size: 11pt;	
+	background: #f0f0f0;
+}
+td.ListCellHeader
+{
+	font-family: Arial, Helvetica;
+	font-size: 11pt;
+	font-weight: bold;
+	background: #e0e0e0;
+}
+Input.FormButtonSmall
+{
+	font-size: 11px;
+	width: 60px;
+	font-family: Arial, Helvetica;
+	height: 20px;
+}
+table.Documentation
+{
+	border: solid 1 #e0e0e0;
+	BORDER-COLLAPSE: collapse
+}
+td.DocumentationHeader
+{
+	background-color: #e0e0e0
+}
+p.topSmall
+{
+	color:#94c5f7;
+}
+td.Footer
+{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+a.menu:link { color: #FFffff; text-decoration: none; target="top"} 
+a.menu:visited { color: #FFffff; text-decoration: none; target="top"} 
+a.menu:hover {background: #ff9999; color: #3333FF; text-decoration: none; } 
+.menu {background: #6ba5d7 ; font-size:12pt; font-style: bold; }

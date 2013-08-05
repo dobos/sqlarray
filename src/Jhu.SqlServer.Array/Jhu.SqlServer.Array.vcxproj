@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{25770BE0-36BE-471B-A0D5-12AAFCFBC97B}</ProjectGuid>
+    <RootNamespace>JhuSqlServerArray</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>Pure</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>Pure</CLRSupport>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>Pure</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Test|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Test|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Test|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Test|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Test|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.orig"
+REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
+"$(FrameworkSDKDir)\Bin\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
+"$(SolutionDir)ReplaceTemplateNames\bin\x64\Debug\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
+REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
+REM $(FrameworkDir)\$(FrameworkVersion)\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
+"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /DEBUG /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)..\..\keys\SqlArray.snk"
+REM --- Replace IL symbols with original ones
+REM copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.il"
+REM del "$(OutDir)$(TargetName).pdb"
+REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>WIN64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX64</TargetMachine>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <NoEntryPoint>false</NoEntryPoint>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.orig"
+REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
+"$(FrameworkSDKDir)\Bin\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
+"$(SolutionDir)ReplaceTemplateNames\bin\x64\Release\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
+REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
+REM $(FrameworkDir)\$(FrameworkVersion)\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
+"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)\..\..\keys\SqlArray.snk"
+REM --- Replace IL symbols with original ones
+REM copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.il"
+REM del "$(OutDir)$(TargetName).pdb"
+REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xml">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jhu.SqlServer.Array.Parser\Jhu.SqlServer.Array.Parser.csproj">
+      <Project>{bb554c88-7679-4250-9cb7-ec254d4f704a}</Project>
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ExceptionMessages.cpp" />
+    <ClCompile Include="FFTW.cpp" />
+    <ClCompile Include="instances.cpp" />
+    <ClCompile Include="Lapack.cpp" />
+    <ClCompile Include="MaxArray.cpp" />
+    <ClCompile Include="ShortArray.cpp" />
+    <ClCompile Include="SqlArray.cpp" />
+    <ClCompile Include="SqlArrayAttribute.cpp" />
+    <ClCompile Include="SqlArrayConcat.cpp" />
+    <ClCompile Include="SqlArrayConcatSubarrays.cpp" />
+    <ClCompile Include="SqlArrayEnumerator.cpp" />
+    <ClCompile Include="SqlArrayException.cpp" />
+    <ClCompile Include="SqlArrayFFT.cpp" />
+    <ClCompile Include="SqlArrayFunctions.cpp" />
+    <ClCompile Include="SqlArrayItemEnumerator.cpp" />
+    <ClCompile Include="SqlArrayLinalg.cpp" />
+    <ClCompile Include="SqlArrayMatrixEnumerator.cpp" />
+    <ClCompile Include="SqlArraySliceEnumerator.cpp" />
+    <ClCompile Include="SqlArraySubarrayEnumerator.cpp" />
+    <ClCompile Include="SqlArrayTest.cpp" />
+    <ClCompile Include="SqlArrayTypeConverter.cpp" />
+    <ClCompile Include="SqlArrayTypeConverterAttribute.cpp" />
+    <ClCompile Include="SqlComplex.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Test|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="enum.h" />
+    <ClInclude Include="ExceptionMessages.h" />
+    <ClInclude Include="FFTW.h" />
+    <ClInclude Include="Lapack.h" />
+    <ClInclude Include="macro.h" />
+    <ClInclude Include="MaxArray.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ShortArray.h" />
+    <ClInclude Include="SqlArray.h" />
+    <ClInclude Include="SqlArrayAttribute.h" />
+    <ClInclude Include="SqlArrayConcat.h" />
+    <ClInclude Include="SqlArrayConcatSubarrays.h" />
+    <ClInclude Include="SqlArrayEnumerator.h" />
+    <ClInclude Include="SqlArrayException.h" />
+    <ClInclude Include="SqlArrayFFT.h" />
+    <ClInclude Include="SqlArrayFunctions.h" />
+    <ClInclude Include="SqlArrayHeader.h" />
+    <ClInclude Include="SqlArrayItemEnumerator.h" />
+    <ClInclude Include="SqlArrayLinalg.h" />
+    <ClInclude Include="SqlArrayMatrixEnumerator.h" />
+    <ClInclude Include="SqlArraySliceEnumerator.h" />
+    <ClInclude Include="SqlArraySubarrayEnumerator.h" />
+    <ClInclude Include="SqlArrayTest.h" />
+    <ClInclude Include="SqlArrayTypeConverter.h" />
+    <ClInclude Include="SqlArrayTypeConverterAttribute.h" />
+    <ClInclude Include="SqlComplex.h" />
+    <ClInclude Include="SqlIndexItemPair.h" />
+    <ClInclude Include="Stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionMessages.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
