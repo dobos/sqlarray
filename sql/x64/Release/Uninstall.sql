@@ -1,5 +1,5 @@
 -- Drop assembly and debug symbols
--- 8/5/2013 6:08:58 PM
+-- 8/5/2013 8:08:27 PM
 
 DROP AGGREGATE [ArrayConcat<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Concat];
 GO
