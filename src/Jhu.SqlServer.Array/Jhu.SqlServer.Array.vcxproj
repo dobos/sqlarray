@@ -95,12 +95,13 @@
     </Link>
     <PostBuildEvent>
       <Command>copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.orig"
-REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
 "$(FrameworkSDKDir)\Bin\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
-"$(SolutionDir)ReplaceTemplateNames\bin\x64\Debug\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
+"$(SolutionDir)build\ReplaceTemplateNames\bin\x64\Debug\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
+"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /DEBUG /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)..\..\keys\SqlArray.snk"
+
+REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
 REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
 REM $(FrameworkDir)\$(FrameworkVersion)\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
-"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /DEBUG /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)..\..\keys\SqlArray.snk"
 REM --- Replace IL symbols with original ones
 REM copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.il"
 REM del "$(OutDir)$(TargetName).pdb"
@@ -134,12 +135,13 @@ REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
     </Link>
     <PostBuildEvent>
       <Command>copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.orig"
-REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
 "$(FrameworkSDKDir)\Bin\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
-"$(SolutionDir)ReplaceTemplateNames\bin\x64\Release\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
+"$(SolutionDir)build\ReplaceTemplateNames\bin\x64\Release\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
+"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)\..\..\keys\SqlArray.snk"
+
+REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
 REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
 REM $(FrameworkDir)\$(FrameworkVersion)\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
-"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)\..\..\keys\SqlArray.snk"
 REM --- Replace IL symbols with original ones
 REM copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.il"
 REM del "$(OutDir)$(TargetName).pdb"
