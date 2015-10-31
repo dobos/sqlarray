@@ -1,6595 +1,6467 @@
 -- Drop assembly and debug symbols
--- 8/5/2013 8:04:14 PM
+-- 2015.10.31. 22:38:18
 
-DROP AGGREGATE [ArrayConcat<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Concat];
+DROP AGGREGATE [TinyIntArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Concat];
+DROP AGGREGATE [TinyIntArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<short\,Jhu::SqlServer::Array::ShortArray>].[Concat];
+DROP AGGREGATE [SmallIntArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<short\,Jhu::SqlServer::Array::MaxArray>].[Concat];
+DROP AGGREGATE [SmallIntArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<int\,Jhu::SqlServer::Array::ShortArray>].[Concat];
+DROP AGGREGATE [IntArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<int\,Jhu::SqlServer::Array::MaxArray>].[Concat];
+DROP AGGREGATE [IntArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<].[Concat];
+DROP AGGREGATE [BigIntArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<].[Concat];
+DROP AGGREGATE [BigIntArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<float\,Jhu::SqlServer::Array::ShortArray>].[Concat];
+DROP AGGREGATE [RealArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<float\,Jhu::SqlServer::Array::MaxArray>].[Concat];
+DROP AGGREGATE [RealArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<double\,Jhu::SqlServer::Array::ShortArray>].[Concat];
+DROP AGGREGATE [FloatArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<double\,Jhu::SqlServer::Array::MaxArray>].[Concat];
+DROP AGGREGATE [FloatArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Concat];
+DROP AGGREGATE [RealComplexArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Concat];
+DROP AGGREGATE [RealComplexArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Concat];
+DROP AGGREGATE [FloatComplexArray].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcat<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Concat];
+DROP AGGREGATE [FloatComplexArrayMax].[Concat];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ConcatSubarrays];
+DROP AGGREGATE [TinyIntArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ConcatSubarrays];
+DROP AGGREGATE [TinyIntArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<short\,Jhu::SqlServer::Array::ShortArray>].[ConcatSubarrays];
+DROP AGGREGATE [SmallIntArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<short\,Jhu::SqlServer::Array::MaxArray>].[ConcatSubarrays];
+DROP AGGREGATE [SmallIntArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<int\,Jhu::SqlServer::Array::ShortArray>].[ConcatSubarrays];
+DROP AGGREGATE [IntArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<int\,Jhu::SqlServer::Array::MaxArray>].[ConcatSubarrays];
+DROP AGGREGATE [IntArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<].[ConcatSubarrays];
+DROP AGGREGATE [BigIntArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<].[ConcatSubarrays];
+DROP AGGREGATE [BigIntArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<float\,Jhu::SqlServer::Array::ShortArray>].[ConcatSubarrays];
+DROP AGGREGATE [RealArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<float\,Jhu::SqlServer::Array::MaxArray>].[ConcatSubarrays];
+DROP AGGREGATE [RealArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<double\,Jhu::SqlServer::Array::ShortArray>].[ConcatSubarrays];
+DROP AGGREGATE [FloatArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<double\,Jhu::SqlServer::Array::MaxArray>].[ConcatSubarrays];
+DROP AGGREGATE [FloatArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConcatSubarrays];
+DROP AGGREGATE [RealComplexArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConcatSubarrays];
+DROP AGGREGATE [RealComplexArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConcatSubarrays];
+DROP AGGREGATE [FloatComplexArray].[ConcatSubarrays];
 GO
 
 
-DROP AGGREGATE [ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConcatSubarrays];
+DROP AGGREGATE [FloatComplexArrayMax].[ConcatSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFFT<double\,Jhu::SqlServer::Array::MaxArray>].[FFTForward];
+DROP FUNCTION [FloatArrayMax].[FFTForward];
 GO
 
 
-DROP FUNCTION [ArrayFFT<double\,Jhu::SqlServer::Array::MaxArray>].[FFTBackward];
+DROP FUNCTION [FloatArrayMax].[FFTBackward];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToString];
+DROP FUNCTION [TinyIntArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Parse];
+DROP FUNCTION [TinyIntArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_1];
+DROP FUNCTION [TinyIntArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_2];
+DROP FUNCTION [TinyIntArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_3];
+DROP FUNCTION [TinyIntArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_4];
+DROP FUNCTION [TinyIntArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_5];
+DROP FUNCTION [TinyIntArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_6];
+DROP FUNCTION [TinyIntArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_7];
+DROP FUNCTION [TinyIntArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_8];
+DROP FUNCTION [TinyIntArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_9];
+DROP FUNCTION [TinyIntArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Vector_10];
+DROP FUNCTION [TinyIntArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Matrix_2];
+DROP FUNCTION [TinyIntArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Matrix_3];
+DROP FUNCTION [TinyIntArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Rank];
+DROP FUNCTION [TinyIntArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[TotalLength];
+DROP FUNCTION [TinyIntArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Length];
+DROP FUNCTION [TinyIntArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Lengths];
+DROP FUNCTION [TinyIntArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Cast];
+DROP FUNCTION [TinyIntArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Raw];
+DROP FUNCTION [TinyIntArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Reshape];
+DROP FUNCTION [TinyIntArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Transpose];
+DROP FUNCTION [TinyIntArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Permute];
+DROP FUNCTION [TinyIntArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Empty];
+DROP FUNCTION [TinyIntArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item];
+DROP FUNCTION [TinyIntArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item_N];
+DROP FUNCTION [TinyIntArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item_1];
+DROP FUNCTION [TinyIntArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item_2];
+DROP FUNCTION [TinyIntArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item_3];
+DROP FUNCTION [TinyIntArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item_4];
+DROP FUNCTION [TinyIntArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item_5];
+DROP FUNCTION [TinyIntArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Item_6];
+DROP FUNCTION [TinyIntArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem];
+DROP FUNCTION [TinyIntArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_N];
+DROP FUNCTION [TinyIntArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_1];
+DROP FUNCTION [TinyIntArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_2];
+DROP FUNCTION [TinyIntArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_3];
+DROP FUNCTION [TinyIntArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_4];
+DROP FUNCTION [TinyIntArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_5];
+DROP FUNCTION [TinyIntArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_6];
+DROP FUNCTION [TinyIntArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Items];
+DROP FUNCTION [TinyIntArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateItems];
+DROP FUNCTION [TinyIntArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Subarray];
+DROP FUNCTION [TinyIntArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarray];
+DROP FUNCTION [TinyIntArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Subarrays];
+DROP FUNCTION [TinyIntArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarrays];
+DROP FUNCTION [TinyIntArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToTable];
+DROP FUNCTION [TinyIntArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToTable_1];
+DROP FUNCTION [TinyIntArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToTable_2];
+DROP FUNCTION [TinyIntArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToTable_3];
+DROP FUNCTION [TinyIntArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToTable_4];
+DROP FUNCTION [TinyIntArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToTable_5];
+DROP FUNCTION [TinyIntArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ToTable_6];
+DROP FUNCTION [TinyIntArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_2];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_3];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_4];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_5];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_6];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_7];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_8];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_9];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_10];
+DROP FUNCTION [TinyIntArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Split];
+DROP FUNCTION [TinyIntArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ItemsToTable];
+DROP FUNCTION [TinyIntArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[SubarraysToTable];
+DROP FUNCTION [TinyIntArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[FromTable];
+DROP FUNCTION [TinyIntArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[FromSubarrayTable];
+DROP FUNCTION [TinyIntArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ScaMul];
+DROP FUNCTION [TinyIntArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ScaDiv];
+DROP FUNCTION [TinyIntArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ScaAdd];
+DROP FUNCTION [TinyIntArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ScaSub];
+DROP FUNCTION [TinyIntArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[FromScalar];
+DROP FUNCTION [TinyIntArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Mul];
+DROP FUNCTION [TinyIntArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Div];
+DROP FUNCTION [TinyIntArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Add];
+DROP FUNCTION [TinyIntArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Sub];
+DROP FUNCTION [TinyIntArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[DotProd];
+DROP FUNCTION [TinyIntArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[CrossProd];
+DROP FUNCTION [TinyIntArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[TensorProd];
+DROP FUNCTION [TinyIntArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[MatProd];
+DROP FUNCTION [TinyIntArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[InnerProd];
+DROP FUNCTION [TinyIntArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Avg];
+DROP FUNCTION [TinyIntArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Min];
+DROP FUNCTION [TinyIntArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Max];
+DROP FUNCTION [TinyIntArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[StDev];
+DROP FUNCTION [TinyIntArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Sum];
+DROP FUNCTION [TinyIntArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Var];
+DROP FUNCTION [TinyIntArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>].[Med];
+DROP FUNCTION [TinyIntArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToString];
+DROP FUNCTION [TinyIntArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Parse];
+DROP FUNCTION [TinyIntArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_1];
+DROP FUNCTION [TinyIntArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_2];
+DROP FUNCTION [TinyIntArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_3];
+DROP FUNCTION [TinyIntArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_4];
+DROP FUNCTION [TinyIntArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_5];
+DROP FUNCTION [TinyIntArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_6];
+DROP FUNCTION [TinyIntArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_7];
+DROP FUNCTION [TinyIntArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_8];
+DROP FUNCTION [TinyIntArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_9];
+DROP FUNCTION [TinyIntArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Vector_10];
+DROP FUNCTION [TinyIntArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Matrix_2];
+DROP FUNCTION [TinyIntArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Matrix_3];
+DROP FUNCTION [TinyIntArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Rank];
+DROP FUNCTION [TinyIntArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[TotalLength];
+DROP FUNCTION [TinyIntArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Length];
+DROP FUNCTION [TinyIntArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Lengths];
+DROP FUNCTION [TinyIntArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Cast];
+DROP FUNCTION [TinyIntArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Raw];
+DROP FUNCTION [TinyIntArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Reshape];
+DROP FUNCTION [TinyIntArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Transpose];
+DROP FUNCTION [TinyIntArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Permute];
+DROP FUNCTION [TinyIntArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Empty];
+DROP FUNCTION [TinyIntArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item];
+DROP FUNCTION [TinyIntArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item_N];
+DROP FUNCTION [TinyIntArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item_1];
+DROP FUNCTION [TinyIntArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item_2];
+DROP FUNCTION [TinyIntArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item_3];
+DROP FUNCTION [TinyIntArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item_4];
+DROP FUNCTION [TinyIntArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item_5];
+DROP FUNCTION [TinyIntArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Item_6];
+DROP FUNCTION [TinyIntArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_N];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_1];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_2];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_3];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_4];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_5];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_6];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Items];
+DROP FUNCTION [TinyIntArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateItems];
+DROP FUNCTION [TinyIntArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Subarray];
+DROP FUNCTION [TinyIntArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarray];
+DROP FUNCTION [TinyIntArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Subarrays];
+DROP FUNCTION [TinyIntArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarrays];
+DROP FUNCTION [TinyIntArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToTable];
+DROP FUNCTION [TinyIntArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToTable_1];
+DROP FUNCTION [TinyIntArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToTable_2];
+DROP FUNCTION [TinyIntArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToTable_3];
+DROP FUNCTION [TinyIntArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToTable_4];
+DROP FUNCTION [TinyIntArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToTable_5];
+DROP FUNCTION [TinyIntArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ToTable_6];
+DROP FUNCTION [TinyIntArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_2];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_3];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_4];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_5];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_6];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_7];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_8];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_9];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_10];
+DROP FUNCTION [TinyIntArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Split];
+DROP FUNCTION [TinyIntArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ItemsToTable];
+DROP FUNCTION [TinyIntArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[SubarraysToTable];
+DROP FUNCTION [TinyIntArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[FromTable];
+DROP FUNCTION [TinyIntArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[FromSubarrayTable];
+DROP FUNCTION [TinyIntArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ScaMul];
+DROP FUNCTION [TinyIntArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ScaDiv];
+DROP FUNCTION [TinyIntArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ScaAdd];
+DROP FUNCTION [TinyIntArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ScaSub];
+DROP FUNCTION [TinyIntArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[FromScalar];
+DROP FUNCTION [TinyIntArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Mul];
+DROP FUNCTION [TinyIntArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Div];
+DROP FUNCTION [TinyIntArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Add];
+DROP FUNCTION [TinyIntArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Sub];
+DROP FUNCTION [TinyIntArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[DotProd];
+DROP FUNCTION [TinyIntArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[CrossProd];
+DROP FUNCTION [TinyIntArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[TensorProd];
+DROP FUNCTION [TinyIntArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[MatProd];
+DROP FUNCTION [TinyIntArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[InnerProd];
+DROP FUNCTION [TinyIntArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Avg];
+DROP FUNCTION [TinyIntArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Min];
+DROP FUNCTION [TinyIntArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Max];
+DROP FUNCTION [TinyIntArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[StDev];
+DROP FUNCTION [TinyIntArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Sum];
+DROP FUNCTION [TinyIntArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Var];
+DROP FUNCTION [TinyIntArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>].[Med];
+DROP FUNCTION [TinyIntArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToString];
+DROP FUNCTION [SmallIntArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Parse];
+DROP FUNCTION [SmallIntArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_1];
+DROP FUNCTION [SmallIntArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_2];
+DROP FUNCTION [SmallIntArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_3];
+DROP FUNCTION [SmallIntArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_4];
+DROP FUNCTION [SmallIntArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_5];
+DROP FUNCTION [SmallIntArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_6];
+DROP FUNCTION [SmallIntArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_7];
+DROP FUNCTION [SmallIntArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_8];
+DROP FUNCTION [SmallIntArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_9];
+DROP FUNCTION [SmallIntArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Vector_10];
+DROP FUNCTION [SmallIntArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Matrix_2];
+DROP FUNCTION [SmallIntArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Matrix_3];
+DROP FUNCTION [SmallIntArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Rank];
+DROP FUNCTION [SmallIntArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[TotalLength];
+DROP FUNCTION [SmallIntArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Length];
+DROP FUNCTION [SmallIntArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Lengths];
+DROP FUNCTION [SmallIntArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Cast];
+DROP FUNCTION [SmallIntArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Raw];
+DROP FUNCTION [SmallIntArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Reshape];
+DROP FUNCTION [SmallIntArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Transpose];
+DROP FUNCTION [SmallIntArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Permute];
+DROP FUNCTION [SmallIntArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Empty];
+DROP FUNCTION [SmallIntArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item];
+DROP FUNCTION [SmallIntArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item_N];
+DROP FUNCTION [SmallIntArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item_1];
+DROP FUNCTION [SmallIntArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item_2];
+DROP FUNCTION [SmallIntArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item_3];
+DROP FUNCTION [SmallIntArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item_4];
+DROP FUNCTION [SmallIntArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item_5];
+DROP FUNCTION [SmallIntArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Item_6];
+DROP FUNCTION [SmallIntArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem];
+DROP FUNCTION [SmallIntArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_N];
+DROP FUNCTION [SmallIntArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_1];
+DROP FUNCTION [SmallIntArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_2];
+DROP FUNCTION [SmallIntArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_3];
+DROP FUNCTION [SmallIntArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_4];
+DROP FUNCTION [SmallIntArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_5];
+DROP FUNCTION [SmallIntArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_6];
+DROP FUNCTION [SmallIntArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Items];
+DROP FUNCTION [SmallIntArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateItems];
+DROP FUNCTION [SmallIntArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Subarray];
+DROP FUNCTION [SmallIntArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarray];
+DROP FUNCTION [SmallIntArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Subarrays];
+DROP FUNCTION [SmallIntArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarrays];
+DROP FUNCTION [SmallIntArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToTable];
+DROP FUNCTION [SmallIntArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToTable_1];
+DROP FUNCTION [SmallIntArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToTable_2];
+DROP FUNCTION [SmallIntArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToTable_3];
+DROP FUNCTION [SmallIntArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToTable_4];
+DROP FUNCTION [SmallIntArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToTable_5];
+DROP FUNCTION [SmallIntArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ToTable_6];
+DROP FUNCTION [SmallIntArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_2];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_3];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_4];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_5];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_6];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_7];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_8];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_9];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_10];
+DROP FUNCTION [SmallIntArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Split];
+DROP FUNCTION [SmallIntArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ItemsToTable];
+DROP FUNCTION [SmallIntArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[SubarraysToTable];
+DROP FUNCTION [SmallIntArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[FromTable];
+DROP FUNCTION [SmallIntArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[FromSubarrayTable];
+DROP FUNCTION [SmallIntArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ScaMul];
+DROP FUNCTION [SmallIntArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ScaDiv];
+DROP FUNCTION [SmallIntArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ScaAdd];
+DROP FUNCTION [SmallIntArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[ScaSub];
+DROP FUNCTION [SmallIntArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[FromScalar];
+DROP FUNCTION [SmallIntArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Mul];
+DROP FUNCTION [SmallIntArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Div];
+DROP FUNCTION [SmallIntArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Add];
+DROP FUNCTION [SmallIntArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Sub];
+DROP FUNCTION [SmallIntArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[DotProd];
+DROP FUNCTION [SmallIntArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[CrossProd];
+DROP FUNCTION [SmallIntArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[TensorProd];
+DROP FUNCTION [SmallIntArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[MatProd];
+DROP FUNCTION [SmallIntArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[InnerProd];
+DROP FUNCTION [SmallIntArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Avg];
+DROP FUNCTION [SmallIntArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Min];
+DROP FUNCTION [SmallIntArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Max];
+DROP FUNCTION [SmallIntArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[StDev];
+DROP FUNCTION [SmallIntArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Sum];
+DROP FUNCTION [SmallIntArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Var];
+DROP FUNCTION [SmallIntArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>].[Med];
+DROP FUNCTION [SmallIntArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToString];
+DROP FUNCTION [SmallIntArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Parse];
+DROP FUNCTION [SmallIntArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_1];
+DROP FUNCTION [SmallIntArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_2];
+DROP FUNCTION [SmallIntArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_3];
+DROP FUNCTION [SmallIntArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_4];
+DROP FUNCTION [SmallIntArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_5];
+DROP FUNCTION [SmallIntArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_6];
+DROP FUNCTION [SmallIntArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_7];
+DROP FUNCTION [SmallIntArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_8];
+DROP FUNCTION [SmallIntArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_9];
+DROP FUNCTION [SmallIntArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Vector_10];
+DROP FUNCTION [SmallIntArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Matrix_2];
+DROP FUNCTION [SmallIntArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Matrix_3];
+DROP FUNCTION [SmallIntArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Rank];
+DROP FUNCTION [SmallIntArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[TotalLength];
+DROP FUNCTION [SmallIntArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Length];
+DROP FUNCTION [SmallIntArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Lengths];
+DROP FUNCTION [SmallIntArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Cast];
+DROP FUNCTION [SmallIntArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Raw];
+DROP FUNCTION [SmallIntArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Reshape];
+DROP FUNCTION [SmallIntArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Transpose];
+DROP FUNCTION [SmallIntArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Permute];
+DROP FUNCTION [SmallIntArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Empty];
+DROP FUNCTION [SmallIntArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item];
+DROP FUNCTION [SmallIntArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item_N];
+DROP FUNCTION [SmallIntArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item_1];
+DROP FUNCTION [SmallIntArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item_2];
+DROP FUNCTION [SmallIntArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item_3];
+DROP FUNCTION [SmallIntArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item_4];
+DROP FUNCTION [SmallIntArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item_5];
+DROP FUNCTION [SmallIntArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Item_6];
+DROP FUNCTION [SmallIntArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_N];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_1];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_2];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_3];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_4];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_5];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_6];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Items];
+DROP FUNCTION [SmallIntArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateItems];
+DROP FUNCTION [SmallIntArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Subarray];
+DROP FUNCTION [SmallIntArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarray];
+DROP FUNCTION [SmallIntArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Subarrays];
+DROP FUNCTION [SmallIntArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarrays];
+DROP FUNCTION [SmallIntArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToTable];
+DROP FUNCTION [SmallIntArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToTable_1];
+DROP FUNCTION [SmallIntArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToTable_2];
+DROP FUNCTION [SmallIntArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToTable_3];
+DROP FUNCTION [SmallIntArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToTable_4];
+DROP FUNCTION [SmallIntArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToTable_5];
+DROP FUNCTION [SmallIntArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ToTable_6];
+DROP FUNCTION [SmallIntArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_2];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_3];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_4];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_5];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_6];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_7];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_8];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_9];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_10];
+DROP FUNCTION [SmallIntArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Split];
+DROP FUNCTION [SmallIntArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ItemsToTable];
+DROP FUNCTION [SmallIntArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[SubarraysToTable];
+DROP FUNCTION [SmallIntArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[FromTable];
+DROP FUNCTION [SmallIntArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[FromSubarrayTable];
+DROP FUNCTION [SmallIntArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ScaMul];
+DROP FUNCTION [SmallIntArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ScaDiv];
+DROP FUNCTION [SmallIntArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ScaAdd];
+DROP FUNCTION [SmallIntArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[ScaSub];
+DROP FUNCTION [SmallIntArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[FromScalar];
+DROP FUNCTION [SmallIntArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Mul];
+DROP FUNCTION [SmallIntArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Div];
+DROP FUNCTION [SmallIntArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Add];
+DROP FUNCTION [SmallIntArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Sub];
+DROP FUNCTION [SmallIntArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[DotProd];
+DROP FUNCTION [SmallIntArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[CrossProd];
+DROP FUNCTION [SmallIntArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[TensorProd];
+DROP FUNCTION [SmallIntArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[MatProd];
+DROP FUNCTION [SmallIntArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[InnerProd];
+DROP FUNCTION [SmallIntArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Avg];
+DROP FUNCTION [SmallIntArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Min];
+DROP FUNCTION [SmallIntArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Max];
+DROP FUNCTION [SmallIntArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[StDev];
+DROP FUNCTION [SmallIntArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Sum];
+DROP FUNCTION [SmallIntArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Var];
+DROP FUNCTION [SmallIntArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>].[Med];
+DROP FUNCTION [SmallIntArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToString];
+DROP FUNCTION [IntArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Parse];
+DROP FUNCTION [IntArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_1];
+DROP FUNCTION [IntArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_2];
+DROP FUNCTION [IntArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_3];
+DROP FUNCTION [IntArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_4];
+DROP FUNCTION [IntArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_5];
+DROP FUNCTION [IntArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_6];
+DROP FUNCTION [IntArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_7];
+DROP FUNCTION [IntArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_8];
+DROP FUNCTION [IntArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_9];
+DROP FUNCTION [IntArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Vector_10];
+DROP FUNCTION [IntArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Matrix_2];
+DROP FUNCTION [IntArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Matrix_3];
+DROP FUNCTION [IntArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Rank];
+DROP FUNCTION [IntArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[TotalLength];
+DROP FUNCTION [IntArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Length];
+DROP FUNCTION [IntArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Lengths];
+DROP FUNCTION [IntArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Cast];
+DROP FUNCTION [IntArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Raw];
+DROP FUNCTION [IntArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Reshape];
+DROP FUNCTION [IntArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Transpose];
+DROP FUNCTION [IntArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Permute];
+DROP FUNCTION [IntArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Empty];
+DROP FUNCTION [IntArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item];
+DROP FUNCTION [IntArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item_N];
+DROP FUNCTION [IntArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item_1];
+DROP FUNCTION [IntArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item_2];
+DROP FUNCTION [IntArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item_3];
+DROP FUNCTION [IntArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item_4];
+DROP FUNCTION [IntArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item_5];
+DROP FUNCTION [IntArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Item_6];
+DROP FUNCTION [IntArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem];
+DROP FUNCTION [IntArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_N];
+DROP FUNCTION [IntArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_1];
+DROP FUNCTION [IntArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_2];
+DROP FUNCTION [IntArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_3];
+DROP FUNCTION [IntArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_4];
+DROP FUNCTION [IntArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_5];
+DROP FUNCTION [IntArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_6];
+DROP FUNCTION [IntArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Items];
+DROP FUNCTION [IntArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateItems];
+DROP FUNCTION [IntArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Subarray];
+DROP FUNCTION [IntArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarray];
+DROP FUNCTION [IntArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Subarrays];
+DROP FUNCTION [IntArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarrays];
+DROP FUNCTION [IntArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToTable];
+DROP FUNCTION [IntArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToTable_1];
+DROP FUNCTION [IntArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToTable_2];
+DROP FUNCTION [IntArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToTable_3];
+DROP FUNCTION [IntArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToTable_4];
+DROP FUNCTION [IntArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToTable_5];
+DROP FUNCTION [IntArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ToTable_6];
+DROP FUNCTION [IntArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_2];
+DROP FUNCTION [IntArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_3];
+DROP FUNCTION [IntArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_4];
+DROP FUNCTION [IntArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_5];
+DROP FUNCTION [IntArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_6];
+DROP FUNCTION [IntArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_7];
+DROP FUNCTION [IntArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_8];
+DROP FUNCTION [IntArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_9];
+DROP FUNCTION [IntArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_10];
+DROP FUNCTION [IntArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Split];
+DROP FUNCTION [IntArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ItemsToTable];
+DROP FUNCTION [IntArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[SubarraysToTable];
+DROP FUNCTION [IntArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[FromTable];
+DROP FUNCTION [IntArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[FromSubarrayTable];
+DROP FUNCTION [IntArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ScaMul];
+DROP FUNCTION [IntArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ScaDiv];
+DROP FUNCTION [IntArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ScaAdd];
+DROP FUNCTION [IntArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[ScaSub];
+DROP FUNCTION [IntArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[FromScalar];
+DROP FUNCTION [IntArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Mul];
+DROP FUNCTION [IntArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Div];
+DROP FUNCTION [IntArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Add];
+DROP FUNCTION [IntArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Sub];
+DROP FUNCTION [IntArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[DotProd];
+DROP FUNCTION [IntArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[CrossProd];
+DROP FUNCTION [IntArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[TensorProd];
+DROP FUNCTION [IntArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[MatProd];
+DROP FUNCTION [IntArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[InnerProd];
+DROP FUNCTION [IntArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Avg];
+DROP FUNCTION [IntArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Min];
+DROP FUNCTION [IntArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Max];
+DROP FUNCTION [IntArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[StDev];
+DROP FUNCTION [IntArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Sum];
+DROP FUNCTION [IntArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Var];
+DROP FUNCTION [IntArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>].[Med];
+DROP FUNCTION [IntArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToString];
+DROP FUNCTION [IntArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Parse];
+DROP FUNCTION [IntArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_1];
+DROP FUNCTION [IntArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_2];
+DROP FUNCTION [IntArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_3];
+DROP FUNCTION [IntArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_4];
+DROP FUNCTION [IntArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_5];
+DROP FUNCTION [IntArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_6];
+DROP FUNCTION [IntArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_7];
+DROP FUNCTION [IntArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_8];
+DROP FUNCTION [IntArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_9];
+DROP FUNCTION [IntArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Vector_10];
+DROP FUNCTION [IntArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Matrix_2];
+DROP FUNCTION [IntArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Matrix_3];
+DROP FUNCTION [IntArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Rank];
+DROP FUNCTION [IntArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[TotalLength];
+DROP FUNCTION [IntArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Length];
+DROP FUNCTION [IntArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Lengths];
+DROP FUNCTION [IntArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Cast];
+DROP FUNCTION [IntArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Raw];
+DROP FUNCTION [IntArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Reshape];
+DROP FUNCTION [IntArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Transpose];
+DROP FUNCTION [IntArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Permute];
+DROP FUNCTION [IntArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Empty];
+DROP FUNCTION [IntArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item];
+DROP FUNCTION [IntArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item_N];
+DROP FUNCTION [IntArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item_1];
+DROP FUNCTION [IntArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item_2];
+DROP FUNCTION [IntArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item_3];
+DROP FUNCTION [IntArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item_4];
+DROP FUNCTION [IntArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item_5];
+DROP FUNCTION [IntArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Item_6];
+DROP FUNCTION [IntArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem];
+DROP FUNCTION [IntArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_N];
+DROP FUNCTION [IntArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_1];
+DROP FUNCTION [IntArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_2];
+DROP FUNCTION [IntArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_3];
+DROP FUNCTION [IntArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_4];
+DROP FUNCTION [IntArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_5];
+DROP FUNCTION [IntArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_6];
+DROP FUNCTION [IntArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Items];
+DROP FUNCTION [IntArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateItems];
+DROP FUNCTION [IntArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Subarray];
+DROP FUNCTION [IntArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarray];
+DROP FUNCTION [IntArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Subarrays];
+DROP FUNCTION [IntArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarrays];
+DROP FUNCTION [IntArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToTable];
+DROP FUNCTION [IntArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToTable_1];
+DROP FUNCTION [IntArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToTable_2];
+DROP FUNCTION [IntArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToTable_3];
+DROP FUNCTION [IntArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToTable_4];
+DROP FUNCTION [IntArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToTable_5];
+DROP FUNCTION [IntArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ToTable_6];
+DROP FUNCTION [IntArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_2];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_3];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_4];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_5];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_6];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_7];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_8];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_9];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_10];
+DROP FUNCTION [IntArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Split];
+DROP FUNCTION [IntArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ItemsToTable];
+DROP FUNCTION [IntArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[SubarraysToTable];
+DROP FUNCTION [IntArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[FromTable];
+DROP FUNCTION [IntArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[FromSubarrayTable];
+DROP FUNCTION [IntArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ScaMul];
+DROP FUNCTION [IntArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ScaDiv];
+DROP FUNCTION [IntArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ScaAdd];
+DROP FUNCTION [IntArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[ScaSub];
+DROP FUNCTION [IntArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[FromScalar];
+DROP FUNCTION [IntArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Mul];
+DROP FUNCTION [IntArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Div];
+DROP FUNCTION [IntArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Add];
+DROP FUNCTION [IntArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Sub];
+DROP FUNCTION [IntArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[DotProd];
+DROP FUNCTION [IntArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[CrossProd];
+DROP FUNCTION [IntArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[TensorProd];
+DROP FUNCTION [IntArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[MatProd];
+DROP FUNCTION [IntArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[InnerProd];
+DROP FUNCTION [IntArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Avg];
+DROP FUNCTION [IntArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Min];
+DROP FUNCTION [IntArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Max];
+DROP FUNCTION [IntArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[StDev];
+DROP FUNCTION [IntArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Sum];
+DROP FUNCTION [IntArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Var];
+DROP FUNCTION [IntArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>].[Med];
+DROP FUNCTION [IntArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToString];
+DROP FUNCTION [BigIntArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Parse];
+DROP FUNCTION [BigIntArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_1];
+DROP FUNCTION [BigIntArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_2];
+DROP FUNCTION [BigIntArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_3];
+DROP FUNCTION [BigIntArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_4];
+DROP FUNCTION [BigIntArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_5];
+DROP FUNCTION [BigIntArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_6];
+DROP FUNCTION [BigIntArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_7];
+DROP FUNCTION [BigIntArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_8];
+DROP FUNCTION [BigIntArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_9];
+DROP FUNCTION [BigIntArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_10];
+DROP FUNCTION [BigIntArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Matrix_2];
+DROP FUNCTION [BigIntArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Matrix_3];
+DROP FUNCTION [BigIntArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Rank];
+DROP FUNCTION [BigIntArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[TotalLength];
+DROP FUNCTION [BigIntArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Length];
+DROP FUNCTION [BigIntArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Lengths];
+DROP FUNCTION [BigIntArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Cast];
+DROP FUNCTION [BigIntArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Raw];
+DROP FUNCTION [BigIntArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Reshape];
+DROP FUNCTION [BigIntArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Transpose];
+DROP FUNCTION [BigIntArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Permute];
+DROP FUNCTION [BigIntArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Empty];
+DROP FUNCTION [BigIntArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item];
+DROP FUNCTION [BigIntArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_N];
+DROP FUNCTION [BigIntArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_1];
+DROP FUNCTION [BigIntArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_2];
+DROP FUNCTION [BigIntArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_3];
+DROP FUNCTION [BigIntArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_4];
+DROP FUNCTION [BigIntArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_5];
+DROP FUNCTION [BigIntArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_6];
+DROP FUNCTION [BigIntArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem];
+DROP FUNCTION [BigIntArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_N];
+DROP FUNCTION [BigIntArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_1];
+DROP FUNCTION [BigIntArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_2];
+DROP FUNCTION [BigIntArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_3];
+DROP FUNCTION [BigIntArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_4];
+DROP FUNCTION [BigIntArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_5];
+DROP FUNCTION [BigIntArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_6];
+DROP FUNCTION [BigIntArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Items];
+DROP FUNCTION [BigIntArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItems];
+DROP FUNCTION [BigIntArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Subarray];
+DROP FUNCTION [BigIntArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateSubarray];
+DROP FUNCTION [BigIntArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Subarrays];
+DROP FUNCTION [BigIntArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateSubarrays];
+DROP FUNCTION [BigIntArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable];
+DROP FUNCTION [BigIntArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_1];
+DROP FUNCTION [BigIntArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_2];
+DROP FUNCTION [BigIntArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_3];
+DROP FUNCTION [BigIntArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_4];
+DROP FUNCTION [BigIntArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_5];
+DROP FUNCTION [BigIntArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_6];
+DROP FUNCTION [BigIntArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_2];
+DROP FUNCTION [BigIntArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_3];
+DROP FUNCTION [BigIntArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_4];
+DROP FUNCTION [BigIntArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_5];
+DROP FUNCTION [BigIntArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_6];
+DROP FUNCTION [BigIntArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_7];
+DROP FUNCTION [BigIntArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_8];
+DROP FUNCTION [BigIntArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_9];
+DROP FUNCTION [BigIntArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_10];
+DROP FUNCTION [BigIntArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Split];
+DROP FUNCTION [BigIntArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ItemsToTable];
+DROP FUNCTION [BigIntArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[SubarraysToTable];
+DROP FUNCTION [BigIntArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[FromTable];
+DROP FUNCTION [BigIntArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[FromSubarrayTable];
+DROP FUNCTION [BigIntArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaMul];
+DROP FUNCTION [BigIntArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaDiv];
+DROP FUNCTION [BigIntArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaAdd];
+DROP FUNCTION [BigIntArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaSub];
+DROP FUNCTION [BigIntArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[FromScalar];
+DROP FUNCTION [BigIntArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Mul];
+DROP FUNCTION [BigIntArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Div];
+DROP FUNCTION [BigIntArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Add];
+DROP FUNCTION [BigIntArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Sub];
+DROP FUNCTION [BigIntArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[DotProd];
+DROP FUNCTION [BigIntArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[CrossProd];
+DROP FUNCTION [BigIntArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[TensorProd];
+DROP FUNCTION [BigIntArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatProd];
+DROP FUNCTION [BigIntArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[InnerProd];
+DROP FUNCTION [BigIntArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Avg];
+DROP FUNCTION [BigIntArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Min];
+DROP FUNCTION [BigIntArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Max];
+DROP FUNCTION [BigIntArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[StDev];
+DROP FUNCTION [BigIntArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Sum];
+DROP FUNCTION [BigIntArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Var];
+DROP FUNCTION [BigIntArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Med];
+DROP FUNCTION [BigIntArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToString];
+DROP FUNCTION [BigIntArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Parse];
+DROP FUNCTION [BigIntArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_1];
+DROP FUNCTION [BigIntArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_2];
+DROP FUNCTION [BigIntArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_3];
+DROP FUNCTION [BigIntArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_4];
+DROP FUNCTION [BigIntArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_5];
+DROP FUNCTION [BigIntArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_6];
+DROP FUNCTION [BigIntArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_7];
+DROP FUNCTION [BigIntArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_8];
+DROP FUNCTION [BigIntArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_9];
+DROP FUNCTION [BigIntArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Vector_10];
+DROP FUNCTION [BigIntArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Matrix_2];
+DROP FUNCTION [BigIntArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Matrix_3];
+DROP FUNCTION [BigIntArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Rank];
+DROP FUNCTION [BigIntArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[TotalLength];
+DROP FUNCTION [BigIntArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Length];
+DROP FUNCTION [BigIntArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Lengths];
+DROP FUNCTION [BigIntArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Cast];
+DROP FUNCTION [BigIntArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Raw];
+DROP FUNCTION [BigIntArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Reshape];
+DROP FUNCTION [BigIntArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Transpose];
+DROP FUNCTION [BigIntArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Permute];
+DROP FUNCTION [BigIntArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Empty];
+DROP FUNCTION [BigIntArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item];
+DROP FUNCTION [BigIntArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_N];
+DROP FUNCTION [BigIntArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_1];
+DROP FUNCTION [BigIntArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_2];
+DROP FUNCTION [BigIntArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_3];
+DROP FUNCTION [BigIntArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_4];
+DROP FUNCTION [BigIntArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_5];
+DROP FUNCTION [BigIntArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Item_6];
+DROP FUNCTION [BigIntArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_N];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_1];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_2];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_3];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_4];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_5];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItem_6];
+DROP FUNCTION [BigIntArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Items];
+DROP FUNCTION [BigIntArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateItems];
+DROP FUNCTION [BigIntArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Subarray];
+DROP FUNCTION [BigIntArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateSubarray];
+DROP FUNCTION [BigIntArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Subarrays];
+DROP FUNCTION [BigIntArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[UpdateSubarrays];
+DROP FUNCTION [BigIntArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable];
+DROP FUNCTION [BigIntArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_1];
+DROP FUNCTION [BigIntArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_2];
+DROP FUNCTION [BigIntArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_3];
+DROP FUNCTION [BigIntArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_4];
+DROP FUNCTION [BigIntArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_5];
+DROP FUNCTION [BigIntArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ToTable_6];
+DROP FUNCTION [BigIntArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_2];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_3];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_4];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_5];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_6];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_7];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_8];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_9];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatrixToTable_10];
+DROP FUNCTION [BigIntArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Split];
+DROP FUNCTION [BigIntArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ItemsToTable];
+DROP FUNCTION [BigIntArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[SubarraysToTable];
+DROP FUNCTION [BigIntArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[FromTable];
+DROP FUNCTION [BigIntArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[FromSubarrayTable];
+DROP FUNCTION [BigIntArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaMul];
+DROP FUNCTION [BigIntArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaDiv];
+DROP FUNCTION [BigIntArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaAdd];
+DROP FUNCTION [BigIntArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[ScaSub];
+DROP FUNCTION [BigIntArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[FromScalar];
+DROP FUNCTION [BigIntArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Mul];
+DROP FUNCTION [BigIntArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Div];
+DROP FUNCTION [BigIntArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Add];
+DROP FUNCTION [BigIntArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Sub];
+DROP FUNCTION [BigIntArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[DotProd];
+DROP FUNCTION [BigIntArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[CrossProd];
+DROP FUNCTION [BigIntArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[TensorProd];
+DROP FUNCTION [BigIntArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[MatProd];
+DROP FUNCTION [BigIntArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[InnerProd];
+DROP FUNCTION [BigIntArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Avg];
+DROP FUNCTION [BigIntArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Min];
+DROP FUNCTION [BigIntArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Max];
+DROP FUNCTION [BigIntArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[StDev];
+DROP FUNCTION [BigIntArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Sum];
+DROP FUNCTION [BigIntArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Var];
+DROP FUNCTION [BigIntArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<].[Med];
+DROP FUNCTION [BigIntArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToString];
+DROP FUNCTION [RealArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Parse];
+DROP FUNCTION [RealArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_1];
+DROP FUNCTION [RealArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_2];
+DROP FUNCTION [RealArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_3];
+DROP FUNCTION [RealArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_4];
+DROP FUNCTION [RealArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_5];
+DROP FUNCTION [RealArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_6];
+DROP FUNCTION [RealArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_7];
+DROP FUNCTION [RealArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_8];
+DROP FUNCTION [RealArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_9];
+DROP FUNCTION [RealArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Vector_10];
+DROP FUNCTION [RealArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Matrix_2];
+DROP FUNCTION [RealArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Matrix_3];
+DROP FUNCTION [RealArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Rank];
+DROP FUNCTION [RealArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[TotalLength];
+DROP FUNCTION [RealArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Length];
+DROP FUNCTION [RealArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Lengths];
+DROP FUNCTION [RealArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Cast];
+DROP FUNCTION [RealArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Raw];
+DROP FUNCTION [RealArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Reshape];
+DROP FUNCTION [RealArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Transpose];
+DROP FUNCTION [RealArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Permute];
+DROP FUNCTION [RealArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Empty];
+DROP FUNCTION [RealArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item];
+DROP FUNCTION [RealArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item_N];
+DROP FUNCTION [RealArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item_1];
+DROP FUNCTION [RealArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item_2];
+DROP FUNCTION [RealArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item_3];
+DROP FUNCTION [RealArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item_4];
+DROP FUNCTION [RealArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item_5];
+DROP FUNCTION [RealArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Item_6];
+DROP FUNCTION [RealArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem];
+DROP FUNCTION [RealArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_N];
+DROP FUNCTION [RealArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_1];
+DROP FUNCTION [RealArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_2];
+DROP FUNCTION [RealArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_3];
+DROP FUNCTION [RealArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_4];
+DROP FUNCTION [RealArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_5];
+DROP FUNCTION [RealArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_6];
+DROP FUNCTION [RealArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Items];
+DROP FUNCTION [RealArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateItems];
+DROP FUNCTION [RealArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Subarray];
+DROP FUNCTION [RealArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarray];
+DROP FUNCTION [RealArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Subarrays];
+DROP FUNCTION [RealArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarrays];
+DROP FUNCTION [RealArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToTable];
+DROP FUNCTION [RealArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToTable_1];
+DROP FUNCTION [RealArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToTable_2];
+DROP FUNCTION [RealArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToTable_3];
+DROP FUNCTION [RealArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToTable_4];
+DROP FUNCTION [RealArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToTable_5];
+DROP FUNCTION [RealArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ToTable_6];
+DROP FUNCTION [RealArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_2];
+DROP FUNCTION [RealArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_3];
+DROP FUNCTION [RealArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_4];
+DROP FUNCTION [RealArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_5];
+DROP FUNCTION [RealArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_6];
+DROP FUNCTION [RealArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_7];
+DROP FUNCTION [RealArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_8];
+DROP FUNCTION [RealArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_9];
+DROP FUNCTION [RealArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_10];
+DROP FUNCTION [RealArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Split];
+DROP FUNCTION [RealArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ItemsToTable];
+DROP FUNCTION [RealArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[SubarraysToTable];
+DROP FUNCTION [RealArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[FromTable];
+DROP FUNCTION [RealArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[FromSubarrayTable];
+DROP FUNCTION [RealArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ScaMul];
+DROP FUNCTION [RealArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ScaDiv];
+DROP FUNCTION [RealArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ScaAdd];
+DROP FUNCTION [RealArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[ScaSub];
+DROP FUNCTION [RealArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[FromScalar];
+DROP FUNCTION [RealArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Mul];
+DROP FUNCTION [RealArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Div];
+DROP FUNCTION [RealArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Add];
+DROP FUNCTION [RealArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Sub];
+DROP FUNCTION [RealArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[DotProd];
+DROP FUNCTION [RealArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[CrossProd];
+DROP FUNCTION [RealArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[TensorProd];
+DROP FUNCTION [RealArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[MatProd];
+DROP FUNCTION [RealArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[InnerProd];
+DROP FUNCTION [RealArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Avg];
+DROP FUNCTION [RealArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Min];
+DROP FUNCTION [RealArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Max];
+DROP FUNCTION [RealArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[StDev];
+DROP FUNCTION [RealArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Sum];
+DROP FUNCTION [RealArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Var];
+DROP FUNCTION [RealArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>].[Med];
+DROP FUNCTION [RealArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToString];
+DROP FUNCTION [RealArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Parse];
+DROP FUNCTION [RealArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_1];
+DROP FUNCTION [RealArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_2];
+DROP FUNCTION [RealArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_3];
+DROP FUNCTION [RealArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_4];
+DROP FUNCTION [RealArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_5];
+DROP FUNCTION [RealArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_6];
+DROP FUNCTION [RealArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_7];
+DROP FUNCTION [RealArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_8];
+DROP FUNCTION [RealArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_9];
+DROP FUNCTION [RealArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Vector_10];
+DROP FUNCTION [RealArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Matrix_2];
+DROP FUNCTION [RealArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Matrix_3];
+DROP FUNCTION [RealArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Rank];
+DROP FUNCTION [RealArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[TotalLength];
+DROP FUNCTION [RealArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Length];
+DROP FUNCTION [RealArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Lengths];
+DROP FUNCTION [RealArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Cast];
+DROP FUNCTION [RealArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Raw];
+DROP FUNCTION [RealArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Reshape];
+DROP FUNCTION [RealArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Transpose];
+DROP FUNCTION [RealArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Permute];
+DROP FUNCTION [RealArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Empty];
+DROP FUNCTION [RealArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item];
+DROP FUNCTION [RealArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item_N];
+DROP FUNCTION [RealArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item_1];
+DROP FUNCTION [RealArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item_2];
+DROP FUNCTION [RealArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item_3];
+DROP FUNCTION [RealArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item_4];
+DROP FUNCTION [RealArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item_5];
+DROP FUNCTION [RealArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Item_6];
+DROP FUNCTION [RealArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem];
+DROP FUNCTION [RealArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_N];
+DROP FUNCTION [RealArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_1];
+DROP FUNCTION [RealArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_2];
+DROP FUNCTION [RealArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_3];
+DROP FUNCTION [RealArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_4];
+DROP FUNCTION [RealArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_5];
+DROP FUNCTION [RealArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_6];
+DROP FUNCTION [RealArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Items];
+DROP FUNCTION [RealArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateItems];
+DROP FUNCTION [RealArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Subarray];
+DROP FUNCTION [RealArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarray];
+DROP FUNCTION [RealArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Subarrays];
+DROP FUNCTION [RealArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarrays];
+DROP FUNCTION [RealArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToTable];
+DROP FUNCTION [RealArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToTable_1];
+DROP FUNCTION [RealArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToTable_2];
+DROP FUNCTION [RealArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToTable_3];
+DROP FUNCTION [RealArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToTable_4];
+DROP FUNCTION [RealArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToTable_5];
+DROP FUNCTION [RealArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ToTable_6];
+DROP FUNCTION [RealArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_2];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_3];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_4];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_5];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_6];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_7];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_8];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_9];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_10];
+DROP FUNCTION [RealArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Split];
+DROP FUNCTION [RealArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ItemsToTable];
+DROP FUNCTION [RealArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[SubarraysToTable];
+DROP FUNCTION [RealArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[FromTable];
+DROP FUNCTION [RealArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[FromSubarrayTable];
+DROP FUNCTION [RealArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ScaMul];
+DROP FUNCTION [RealArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ScaDiv];
+DROP FUNCTION [RealArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ScaAdd];
+DROP FUNCTION [RealArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[ScaSub];
+DROP FUNCTION [RealArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[FromScalar];
+DROP FUNCTION [RealArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Mul];
+DROP FUNCTION [RealArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Div];
+DROP FUNCTION [RealArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Add];
+DROP FUNCTION [RealArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Sub];
+DROP FUNCTION [RealArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[DotProd];
+DROP FUNCTION [RealArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[CrossProd];
+DROP FUNCTION [RealArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[TensorProd];
+DROP FUNCTION [RealArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[MatProd];
+DROP FUNCTION [RealArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[InnerProd];
+DROP FUNCTION [RealArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Avg];
+DROP FUNCTION [RealArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Min];
+DROP FUNCTION [RealArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Max];
+DROP FUNCTION [RealArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[StDev];
+DROP FUNCTION [RealArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Sum];
+DROP FUNCTION [RealArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Var];
+DROP FUNCTION [RealArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>].[Med];
+DROP FUNCTION [RealArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToString];
+DROP FUNCTION [FloatArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Parse];
+DROP FUNCTION [FloatArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_1];
+DROP FUNCTION [FloatArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_2];
+DROP FUNCTION [FloatArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_3];
+DROP FUNCTION [FloatArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_4];
+DROP FUNCTION [FloatArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_5];
+DROP FUNCTION [FloatArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_6];
+DROP FUNCTION [FloatArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_7];
+DROP FUNCTION [FloatArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_8];
+DROP FUNCTION [FloatArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_9];
+DROP FUNCTION [FloatArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Vector_10];
+DROP FUNCTION [FloatArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Matrix_2];
+DROP FUNCTION [FloatArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Matrix_3];
+DROP FUNCTION [FloatArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Rank];
+DROP FUNCTION [FloatArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[TotalLength];
+DROP FUNCTION [FloatArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Length];
+DROP FUNCTION [FloatArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Lengths];
+DROP FUNCTION [FloatArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Cast];
+DROP FUNCTION [FloatArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Raw];
+DROP FUNCTION [FloatArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Reshape];
+DROP FUNCTION [FloatArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Transpose];
+DROP FUNCTION [FloatArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Permute];
+DROP FUNCTION [FloatArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Empty];
+DROP FUNCTION [FloatArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item];
+DROP FUNCTION [FloatArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item_N];
+DROP FUNCTION [FloatArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item_1];
+DROP FUNCTION [FloatArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item_2];
+DROP FUNCTION [FloatArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item_3];
+DROP FUNCTION [FloatArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item_4];
+DROP FUNCTION [FloatArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item_5];
+DROP FUNCTION [FloatArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Item_6];
+DROP FUNCTION [FloatArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem];
+DROP FUNCTION [FloatArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_N];
+DROP FUNCTION [FloatArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_1];
+DROP FUNCTION [FloatArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_2];
+DROP FUNCTION [FloatArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_3];
+DROP FUNCTION [FloatArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_4];
+DROP FUNCTION [FloatArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_5];
+DROP FUNCTION [FloatArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_6];
+DROP FUNCTION [FloatArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Items];
+DROP FUNCTION [FloatArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateItems];
+DROP FUNCTION [FloatArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Subarray];
+DROP FUNCTION [FloatArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarray];
+DROP FUNCTION [FloatArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Subarrays];
+DROP FUNCTION [FloatArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarrays];
+DROP FUNCTION [FloatArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToTable];
+DROP FUNCTION [FloatArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToTable_1];
+DROP FUNCTION [FloatArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToTable_2];
+DROP FUNCTION [FloatArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToTable_3];
+DROP FUNCTION [FloatArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToTable_4];
+DROP FUNCTION [FloatArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToTable_5];
+DROP FUNCTION [FloatArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ToTable_6];
+DROP FUNCTION [FloatArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_2];
+DROP FUNCTION [FloatArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_3];
+DROP FUNCTION [FloatArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_4];
+DROP FUNCTION [FloatArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_5];
+DROP FUNCTION [FloatArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_6];
+DROP FUNCTION [FloatArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_7];
+DROP FUNCTION [FloatArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_8];
+DROP FUNCTION [FloatArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_9];
+DROP FUNCTION [FloatArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_10];
+DROP FUNCTION [FloatArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Split];
+DROP FUNCTION [FloatArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ItemsToTable];
+DROP FUNCTION [FloatArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[SubarraysToTable];
+DROP FUNCTION [FloatArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[FromTable];
+DROP FUNCTION [FloatArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[FromSubarrayTable];
+DROP FUNCTION [FloatArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ScaMul];
+DROP FUNCTION [FloatArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ScaDiv];
+DROP FUNCTION [FloatArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ScaAdd];
+DROP FUNCTION [FloatArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[ScaSub];
+DROP FUNCTION [FloatArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[FromScalar];
+DROP FUNCTION [FloatArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Mul];
+DROP FUNCTION [FloatArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Div];
+DROP FUNCTION [FloatArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Add];
+DROP FUNCTION [FloatArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Sub];
+DROP FUNCTION [FloatArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[DotProd];
+DROP FUNCTION [FloatArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[CrossProd];
+DROP FUNCTION [FloatArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[TensorProd];
+DROP FUNCTION [FloatArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[MatProd];
+DROP FUNCTION [FloatArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[InnerProd];
+DROP FUNCTION [FloatArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Avg];
+DROP FUNCTION [FloatArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Min];
+DROP FUNCTION [FloatArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Max];
+DROP FUNCTION [FloatArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[StDev];
+DROP FUNCTION [FloatArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Sum];
+DROP FUNCTION [FloatArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Var];
+DROP FUNCTION [FloatArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>].[Med];
+DROP FUNCTION [FloatArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToString];
+DROP FUNCTION [FloatArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Parse];
+DROP FUNCTION [FloatArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_1];
+DROP FUNCTION [FloatArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_2];
+DROP FUNCTION [FloatArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_3];
+DROP FUNCTION [FloatArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_4];
+DROP FUNCTION [FloatArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_5];
+DROP FUNCTION [FloatArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_6];
+DROP FUNCTION [FloatArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_7];
+DROP FUNCTION [FloatArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_8];
+DROP FUNCTION [FloatArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_9];
+DROP FUNCTION [FloatArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Vector_10];
+DROP FUNCTION [FloatArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Matrix_2];
+DROP FUNCTION [FloatArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Matrix_3];
+DROP FUNCTION [FloatArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Rank];
+DROP FUNCTION [FloatArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[TotalLength];
+DROP FUNCTION [FloatArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Length];
+DROP FUNCTION [FloatArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Lengths];
+DROP FUNCTION [FloatArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Cast];
+DROP FUNCTION [FloatArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Raw];
+DROP FUNCTION [FloatArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Reshape];
+DROP FUNCTION [FloatArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Transpose];
+DROP FUNCTION [FloatArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Permute];
+DROP FUNCTION [FloatArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Empty];
+DROP FUNCTION [FloatArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item];
+DROP FUNCTION [FloatArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item_N];
+DROP FUNCTION [FloatArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item_1];
+DROP FUNCTION [FloatArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item_2];
+DROP FUNCTION [FloatArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item_3];
+DROP FUNCTION [FloatArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item_4];
+DROP FUNCTION [FloatArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item_5];
+DROP FUNCTION [FloatArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Item_6];
+DROP FUNCTION [FloatArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem];
+DROP FUNCTION [FloatArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_N];
+DROP FUNCTION [FloatArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_1];
+DROP FUNCTION [FloatArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_2];
+DROP FUNCTION [FloatArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_3];
+DROP FUNCTION [FloatArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_4];
+DROP FUNCTION [FloatArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_5];
+DROP FUNCTION [FloatArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_6];
+DROP FUNCTION [FloatArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Items];
+DROP FUNCTION [FloatArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateItems];
+DROP FUNCTION [FloatArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Subarray];
+DROP FUNCTION [FloatArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarray];
+DROP FUNCTION [FloatArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Subarrays];
+DROP FUNCTION [FloatArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarrays];
+DROP FUNCTION [FloatArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToTable];
+DROP FUNCTION [FloatArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToTable_1];
+DROP FUNCTION [FloatArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToTable_2];
+DROP FUNCTION [FloatArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToTable_3];
+DROP FUNCTION [FloatArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToTable_4];
+DROP FUNCTION [FloatArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToTable_5];
+DROP FUNCTION [FloatArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ToTable_6];
+DROP FUNCTION [FloatArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_2];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_3];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_4];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_5];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_6];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_7];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_8];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_9];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_10];
+DROP FUNCTION [FloatArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Split];
+DROP FUNCTION [FloatArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ItemsToTable];
+DROP FUNCTION [FloatArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[SubarraysToTable];
+DROP FUNCTION [FloatArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[FromTable];
+DROP FUNCTION [FloatArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[FromSubarrayTable];
+DROP FUNCTION [FloatArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ScaMul];
+DROP FUNCTION [FloatArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ScaDiv];
+DROP FUNCTION [FloatArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ScaAdd];
+DROP FUNCTION [FloatArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[ScaSub];
+DROP FUNCTION [FloatArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[FromScalar];
+DROP FUNCTION [FloatArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Mul];
+DROP FUNCTION [FloatArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Div];
+DROP FUNCTION [FloatArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Add];
+DROP FUNCTION [FloatArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Sub];
+DROP FUNCTION [FloatArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[DotProd];
+DROP FUNCTION [FloatArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[CrossProd];
+DROP FUNCTION [FloatArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[TensorProd];
+DROP FUNCTION [FloatArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[MatProd];
+DROP FUNCTION [FloatArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[InnerProd];
+DROP FUNCTION [FloatArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Avg];
+DROP FUNCTION [FloatArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Min];
+DROP FUNCTION [FloatArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Max];
+DROP FUNCTION [FloatArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[StDev];
+DROP FUNCTION [FloatArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Sum];
+DROP FUNCTION [FloatArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Var];
+DROP FUNCTION [FloatArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>].[Med];
+DROP FUNCTION [FloatArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToString];
+DROP FUNCTION [RealComplexArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Parse];
+DROP FUNCTION [RealComplexArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_1];
+DROP FUNCTION [RealComplexArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_2];
+DROP FUNCTION [RealComplexArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_3];
+DROP FUNCTION [RealComplexArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_4];
+DROP FUNCTION [RealComplexArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_5];
+DROP FUNCTION [RealComplexArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_6];
+DROP FUNCTION [RealComplexArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_7];
+DROP FUNCTION [RealComplexArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_8];
+DROP FUNCTION [RealComplexArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_9];
+DROP FUNCTION [RealComplexArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Vector_10];
+DROP FUNCTION [RealComplexArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Matrix_2];
+DROP FUNCTION [RealComplexArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Matrix_3];
+DROP FUNCTION [RealComplexArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Rank];
+DROP FUNCTION [RealComplexArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[TotalLength];
+DROP FUNCTION [RealComplexArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Length];
+DROP FUNCTION [RealComplexArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Lengths];
+DROP FUNCTION [RealComplexArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Cast];
+DROP FUNCTION [RealComplexArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Raw];
+DROP FUNCTION [RealComplexArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Reshape];
+DROP FUNCTION [RealComplexArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Transpose];
+DROP FUNCTION [RealComplexArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Permute];
+DROP FUNCTION [RealComplexArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Empty];
+DROP FUNCTION [RealComplexArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item];
+DROP FUNCTION [RealComplexArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item_N];
+DROP FUNCTION [RealComplexArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item_1];
+DROP FUNCTION [RealComplexArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item_2];
+DROP FUNCTION [RealComplexArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item_3];
+DROP FUNCTION [RealComplexArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item_4];
+DROP FUNCTION [RealComplexArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item_5];
+DROP FUNCTION [RealComplexArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Item_6];
+DROP FUNCTION [RealComplexArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem];
+DROP FUNCTION [RealComplexArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_N];
+DROP FUNCTION [RealComplexArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_1];
+DROP FUNCTION [RealComplexArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_2];
+DROP FUNCTION [RealComplexArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_3];
+DROP FUNCTION [RealComplexArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_4];
+DROP FUNCTION [RealComplexArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_5];
+DROP FUNCTION [RealComplexArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_6];
+DROP FUNCTION [RealComplexArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Items];
+DROP FUNCTION [RealComplexArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItems];
+DROP FUNCTION [RealComplexArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Subarray];
+DROP FUNCTION [RealComplexArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarray];
+DROP FUNCTION [RealComplexArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Subarrays];
+DROP FUNCTION [RealComplexArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarrays];
+DROP FUNCTION [RealComplexArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToTable];
+DROP FUNCTION [RealComplexArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_1];
+DROP FUNCTION [RealComplexArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_2];
+DROP FUNCTION [RealComplexArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_3];
+DROP FUNCTION [RealComplexArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_4];
+DROP FUNCTION [RealComplexArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_5];
+DROP FUNCTION [RealComplexArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_6];
+DROP FUNCTION [RealComplexArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_2];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_3];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_4];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_5];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_6];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_7];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_8];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_9];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_10];
+DROP FUNCTION [RealComplexArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Split];
+DROP FUNCTION [RealComplexArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ItemsToTable];
+DROP FUNCTION [RealComplexArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[SubarraysToTable];
+DROP FUNCTION [RealComplexArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[FromTable];
+DROP FUNCTION [RealComplexArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[FromSubarrayTable];
+DROP FUNCTION [RealComplexArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ScaMul];
+DROP FUNCTION [RealComplexArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ScaDiv];
+DROP FUNCTION [RealComplexArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ScaAdd];
+DROP FUNCTION [RealComplexArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ScaSub];
+DROP FUNCTION [RealComplexArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[FromScalar];
+DROP FUNCTION [RealComplexArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Mul];
+DROP FUNCTION [RealComplexArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Div];
+DROP FUNCTION [RealComplexArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Add];
+DROP FUNCTION [RealComplexArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Sub];
+DROP FUNCTION [RealComplexArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[DotProd];
+DROP FUNCTION [RealComplexArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[CrossProd];
+DROP FUNCTION [RealComplexArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[TensorProd];
+DROP FUNCTION [RealComplexArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[MatProd];
+DROP FUNCTION [RealComplexArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[InnerProd];
+DROP FUNCTION [RealComplexArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Avg];
+DROP FUNCTION [RealComplexArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Min];
+DROP FUNCTION [RealComplexArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Max];
+DROP FUNCTION [RealComplexArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[StDev];
+DROP FUNCTION [RealComplexArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Sum];
+DROP FUNCTION [RealComplexArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Var];
+DROP FUNCTION [RealComplexArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[Med];
+DROP FUNCTION [RealComplexArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToString];
+DROP FUNCTION [RealComplexArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Parse];
+DROP FUNCTION [RealComplexArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_1];
+DROP FUNCTION [RealComplexArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_2];
+DROP FUNCTION [RealComplexArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_3];
+DROP FUNCTION [RealComplexArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_4];
+DROP FUNCTION [RealComplexArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_5];
+DROP FUNCTION [RealComplexArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_6];
+DROP FUNCTION [RealComplexArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_7];
+DROP FUNCTION [RealComplexArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_8];
+DROP FUNCTION [RealComplexArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_9];
+DROP FUNCTION [RealComplexArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Vector_10];
+DROP FUNCTION [RealComplexArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Matrix_2];
+DROP FUNCTION [RealComplexArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Matrix_3];
+DROP FUNCTION [RealComplexArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Rank];
+DROP FUNCTION [RealComplexArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[TotalLength];
+DROP FUNCTION [RealComplexArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Length];
+DROP FUNCTION [RealComplexArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Lengths];
+DROP FUNCTION [RealComplexArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Cast];
+DROP FUNCTION [RealComplexArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Raw];
+DROP FUNCTION [RealComplexArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Reshape];
+DROP FUNCTION [RealComplexArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Transpose];
+DROP FUNCTION [RealComplexArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Permute];
+DROP FUNCTION [RealComplexArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Empty];
+DROP FUNCTION [RealComplexArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item];
+DROP FUNCTION [RealComplexArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item_N];
+DROP FUNCTION [RealComplexArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item_1];
+DROP FUNCTION [RealComplexArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item_2];
+DROP FUNCTION [RealComplexArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item_3];
+DROP FUNCTION [RealComplexArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item_4];
+DROP FUNCTION [RealComplexArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item_5];
+DROP FUNCTION [RealComplexArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Item_6];
+DROP FUNCTION [RealComplexArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_N];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_1];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_2];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_3];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_4];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_5];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_6];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Items];
+DROP FUNCTION [RealComplexArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItems];
+DROP FUNCTION [RealComplexArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Subarray];
+DROP FUNCTION [RealComplexArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarray];
+DROP FUNCTION [RealComplexArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Subarrays];
+DROP FUNCTION [RealComplexArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarrays];
+DROP FUNCTION [RealComplexArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToTable];
+DROP FUNCTION [RealComplexArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_1];
+DROP FUNCTION [RealComplexArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_2];
+DROP FUNCTION [RealComplexArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_3];
+DROP FUNCTION [RealComplexArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_4];
+DROP FUNCTION [RealComplexArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_5];
+DROP FUNCTION [RealComplexArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_6];
+DROP FUNCTION [RealComplexArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_2];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_3];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_4];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_5];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_6];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_7];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_8];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_9];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_10];
+DROP FUNCTION [RealComplexArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Split];
+DROP FUNCTION [RealComplexArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ItemsToTable];
+DROP FUNCTION [RealComplexArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[SubarraysToTable];
+DROP FUNCTION [RealComplexArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[FromTable];
+DROP FUNCTION [RealComplexArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[FromSubarrayTable];
+DROP FUNCTION [RealComplexArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ScaMul];
+DROP FUNCTION [RealComplexArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ScaDiv];
+DROP FUNCTION [RealComplexArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ScaAdd];
+DROP FUNCTION [RealComplexArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ScaSub];
+DROP FUNCTION [RealComplexArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[FromScalar];
+DROP FUNCTION [RealComplexArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Mul];
+DROP FUNCTION [RealComplexArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Div];
+DROP FUNCTION [RealComplexArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Add];
+DROP FUNCTION [RealComplexArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Sub];
+DROP FUNCTION [RealComplexArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[DotProd];
+DROP FUNCTION [RealComplexArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[CrossProd];
+DROP FUNCTION [RealComplexArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[TensorProd];
+DROP FUNCTION [RealComplexArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[MatProd];
+DROP FUNCTION [RealComplexArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[InnerProd];
+DROP FUNCTION [RealComplexArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Avg];
+DROP FUNCTION [RealComplexArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Min];
+DROP FUNCTION [RealComplexArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Max];
+DROP FUNCTION [RealComplexArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[StDev];
+DROP FUNCTION [RealComplexArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Sum];
+DROP FUNCTION [RealComplexArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Var];
+DROP FUNCTION [RealComplexArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[Med];
+DROP FUNCTION [RealComplexArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToString];
+DROP FUNCTION [FloatComplexArray].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Parse];
+DROP FUNCTION [FloatComplexArray].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_1];
+DROP FUNCTION [FloatComplexArray].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_2];
+DROP FUNCTION [FloatComplexArray].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_3];
+DROP FUNCTION [FloatComplexArray].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_4];
+DROP FUNCTION [FloatComplexArray].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_5];
+DROP FUNCTION [FloatComplexArray].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_6];
+DROP FUNCTION [FloatComplexArray].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_7];
+DROP FUNCTION [FloatComplexArray].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_8];
+DROP FUNCTION [FloatComplexArray].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_9];
+DROP FUNCTION [FloatComplexArray].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Vector_10];
+DROP FUNCTION [FloatComplexArray].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Matrix_2];
+DROP FUNCTION [FloatComplexArray].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Matrix_3];
+DROP FUNCTION [FloatComplexArray].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Rank];
+DROP FUNCTION [FloatComplexArray].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[TotalLength];
+DROP FUNCTION [FloatComplexArray].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Length];
+DROP FUNCTION [FloatComplexArray].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Lengths];
+DROP FUNCTION [FloatComplexArray].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Cast];
+DROP FUNCTION [FloatComplexArray].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Raw];
+DROP FUNCTION [FloatComplexArray].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Reshape];
+DROP FUNCTION [FloatComplexArray].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Transpose];
+DROP FUNCTION [FloatComplexArray].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Permute];
+DROP FUNCTION [FloatComplexArray].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Empty];
+DROP FUNCTION [FloatComplexArray].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item];
+DROP FUNCTION [FloatComplexArray].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item_N];
+DROP FUNCTION [FloatComplexArray].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item_1];
+DROP FUNCTION [FloatComplexArray].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item_2];
+DROP FUNCTION [FloatComplexArray].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item_3];
+DROP FUNCTION [FloatComplexArray].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item_4];
+DROP FUNCTION [FloatComplexArray].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item_5];
+DROP FUNCTION [FloatComplexArray].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Item_6];
+DROP FUNCTION [FloatComplexArray].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem];
+DROP FUNCTION [FloatComplexArray].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_N];
+DROP FUNCTION [FloatComplexArray].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_1];
+DROP FUNCTION [FloatComplexArray].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_2];
+DROP FUNCTION [FloatComplexArray].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_3];
+DROP FUNCTION [FloatComplexArray].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_4];
+DROP FUNCTION [FloatComplexArray].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_5];
+DROP FUNCTION [FloatComplexArray].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItem_6];
+DROP FUNCTION [FloatComplexArray].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Items];
+DROP FUNCTION [FloatComplexArray].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateItems];
+DROP FUNCTION [FloatComplexArray].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Subarray];
+DROP FUNCTION [FloatComplexArray].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarray];
+DROP FUNCTION [FloatComplexArray].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Subarrays];
+DROP FUNCTION [FloatComplexArray].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[UpdateSubarrays];
+DROP FUNCTION [FloatComplexArray].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToTable];
+DROP FUNCTION [FloatComplexArray].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_1];
+DROP FUNCTION [FloatComplexArray].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_2];
+DROP FUNCTION [FloatComplexArray].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_3];
+DROP FUNCTION [FloatComplexArray].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_4];
+DROP FUNCTION [FloatComplexArray].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_5];
+DROP FUNCTION [FloatComplexArray].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ToTable_6];
+DROP FUNCTION [FloatComplexArray].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_2];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_3];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_4];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_5];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_6];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_7];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_8];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_9];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatrixToTable_10];
+DROP FUNCTION [FloatComplexArray].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Split];
+DROP FUNCTION [FloatComplexArray].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ItemsToTable];
+DROP FUNCTION [FloatComplexArray].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[SubarraysToTable];
+DROP FUNCTION [FloatComplexArray].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[FromTable];
+DROP FUNCTION [FloatComplexArray].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[FromSubarrayTable];
+DROP FUNCTION [FloatComplexArray].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ScaMul];
+DROP FUNCTION [FloatComplexArray].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ScaDiv];
+DROP FUNCTION [FloatComplexArray].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ScaAdd];
+DROP FUNCTION [FloatComplexArray].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ScaSub];
+DROP FUNCTION [FloatComplexArray].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[FromScalar];
+DROP FUNCTION [FloatComplexArray].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Mul];
+DROP FUNCTION [FloatComplexArray].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Div];
+DROP FUNCTION [FloatComplexArray].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Add];
+DROP FUNCTION [FloatComplexArray].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Sub];
+DROP FUNCTION [FloatComplexArray].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[DotProd];
+DROP FUNCTION [FloatComplexArray].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[CrossProd];
+DROP FUNCTION [FloatComplexArray].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[TensorProd];
+DROP FUNCTION [FloatComplexArray].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[MatProd];
+DROP FUNCTION [FloatComplexArray].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[InnerProd];
+DROP FUNCTION [FloatComplexArray].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Avg];
+DROP FUNCTION [FloatComplexArray].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Min];
+DROP FUNCTION [FloatComplexArray].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Max];
+DROP FUNCTION [FloatComplexArray].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[StDev];
+DROP FUNCTION [FloatComplexArray].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Sum];
+DROP FUNCTION [FloatComplexArray].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Var];
+DROP FUNCTION [FloatComplexArray].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[Med];
+DROP FUNCTION [FloatComplexArray].[Med];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToString];
+DROP FUNCTION [FloatComplexArrayMax].[ToString];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Parse];
+DROP FUNCTION [FloatComplexArrayMax].[Parse];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_1];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_2];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_3];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_4];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_5];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_6];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_7];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_8];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_9];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Vector_10];
+DROP FUNCTION [FloatComplexArrayMax].[Vector_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Matrix_2];
+DROP FUNCTION [FloatComplexArrayMax].[Matrix_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Matrix_3];
+DROP FUNCTION [FloatComplexArrayMax].[Matrix_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Rank];
+DROP FUNCTION [FloatComplexArrayMax].[Rank];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[TotalLength];
+DROP FUNCTION [FloatComplexArrayMax].[TotalLength];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Length];
+DROP FUNCTION [FloatComplexArrayMax].[Length];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Lengths];
+DROP FUNCTION [FloatComplexArrayMax].[Lengths];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Cast];
+DROP FUNCTION [FloatComplexArrayMax].[Cast];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Raw];
+DROP FUNCTION [FloatComplexArrayMax].[Raw];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Reshape];
+DROP FUNCTION [FloatComplexArrayMax].[Reshape];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Transpose];
+DROP FUNCTION [FloatComplexArrayMax].[Transpose];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Permute];
+DROP FUNCTION [FloatComplexArrayMax].[Permute];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Empty];
+DROP FUNCTION [FloatComplexArrayMax].[Empty];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item];
+DROP FUNCTION [FloatComplexArrayMax].[Item];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item_N];
+DROP FUNCTION [FloatComplexArrayMax].[Item_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item_1];
+DROP FUNCTION [FloatComplexArrayMax].[Item_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item_2];
+DROP FUNCTION [FloatComplexArrayMax].[Item_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item_3];
+DROP FUNCTION [FloatComplexArrayMax].[Item_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item_4];
+DROP FUNCTION [FloatComplexArrayMax].[Item_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item_5];
+DROP FUNCTION [FloatComplexArrayMax].[Item_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Item_6];
+DROP FUNCTION [FloatComplexArrayMax].[Item_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_N];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem_N];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_1];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_2];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_3];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_4];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_5];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItem_6];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItem_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Items];
+DROP FUNCTION [FloatComplexArrayMax].[Items];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateItems];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateItems];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Subarray];
+DROP FUNCTION [FloatComplexArrayMax].[Subarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarray];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateSubarray];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Subarrays];
+DROP FUNCTION [FloatComplexArrayMax].[Subarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[UpdateSubarrays];
+DROP FUNCTION [FloatComplexArrayMax].[UpdateSubarrays];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToTable];
+DROP FUNCTION [FloatComplexArrayMax].[ToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_1];
+DROP FUNCTION [FloatComplexArrayMax].[ToTable_1];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_2];
+DROP FUNCTION [FloatComplexArrayMax].[ToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_3];
+DROP FUNCTION [FloatComplexArrayMax].[ToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_4];
+DROP FUNCTION [FloatComplexArrayMax].[ToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_5];
+DROP FUNCTION [FloatComplexArrayMax].[ToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ToTable_6];
+DROP FUNCTION [FloatComplexArrayMax].[ToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_2];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_2];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_3];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_3];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_4];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_4];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_5];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_5];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_6];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_6];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_7];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_7];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_8];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_8];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_9];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_9];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatrixToTable_10];
+DROP FUNCTION [FloatComplexArrayMax].[MatrixToTable_10];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Split];
+DROP FUNCTION [FloatComplexArrayMax].[Split];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ItemsToTable];
+DROP FUNCTION [FloatComplexArrayMax].[ItemsToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[SubarraysToTable];
+DROP FUNCTION [FloatComplexArrayMax].[SubarraysToTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[FromTable];
+DROP FUNCTION [FloatComplexArrayMax].[FromTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[FromSubarrayTable];
+DROP FUNCTION [FloatComplexArrayMax].[FromSubarrayTable];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ScaMul];
+DROP FUNCTION [FloatComplexArrayMax].[ScaMul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ScaDiv];
+DROP FUNCTION [FloatComplexArrayMax].[ScaDiv];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ScaAdd];
+DROP FUNCTION [FloatComplexArrayMax].[ScaAdd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ScaSub];
+DROP FUNCTION [FloatComplexArrayMax].[ScaSub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[FromScalar];
+DROP FUNCTION [FloatComplexArrayMax].[FromScalar];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Mul];
+DROP FUNCTION [FloatComplexArrayMax].[Mul];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Div];
+DROP FUNCTION [FloatComplexArrayMax].[Div];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Add];
+DROP FUNCTION [FloatComplexArrayMax].[Add];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Sub];
+DROP FUNCTION [FloatComplexArrayMax].[Sub];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[DotProd];
+DROP FUNCTION [FloatComplexArrayMax].[DotProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[CrossProd];
+DROP FUNCTION [FloatComplexArrayMax].[CrossProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[TensorProd];
+DROP FUNCTION [FloatComplexArrayMax].[TensorProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[MatProd];
+DROP FUNCTION [FloatComplexArrayMax].[MatProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[InnerProd];
+DROP FUNCTION [FloatComplexArrayMax].[InnerProd];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Avg];
+DROP FUNCTION [FloatComplexArrayMax].[Avg];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Min];
+DROP FUNCTION [FloatComplexArrayMax].[Min];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Max];
+DROP FUNCTION [FloatComplexArrayMax].[Max];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[StDev];
+DROP FUNCTION [FloatComplexArrayMax].[StDev];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Sum];
+DROP FUNCTION [FloatComplexArrayMax].[Sum];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Var];
+DROP FUNCTION [FloatComplexArrayMax].[Var];
 GO
 
 
-DROP FUNCTION [ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[Med];
+DROP FUNCTION [FloatComplexArrayMax].[Med];
 GO
 
 
-DROP FUNCTION [ArrayLinalg<double\,Jhu::SqlServer::Array::ShortArray>].[SVD];
+DROP FUNCTION [FloatArray].[SVD];
 GO
 
 
-DROP FUNCTION [ArrayLinalg<double\,Jhu::SqlServer::Array::MaxArray>].[SVD];
+DROP FUNCTION [FloatArrayMax].[SVD];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatArray].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToTinyIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToTinyIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,short\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToSmallIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,short\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToSmallIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,short\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToSmallIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,short\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToSmallIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,int\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,int\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,int\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,int\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToBigIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToBigIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToBigIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToBigIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArray].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<unsigned char\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [TinyIntArrayMax].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,short\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToSmallIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,short\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToSmallIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToTinyIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToTinyIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToTinyIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToTinyIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,int\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,int\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,int\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,int\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToBigIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToBigIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToBigIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToBigIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArray].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<short\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [SmallIntArrayMax].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,int\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,int\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToTinyIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,unsigned char\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToTinyIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToTinyIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,unsigned char\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToTinyIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,short\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToSmallIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,short\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToSmallIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,short\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToSmallIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,short\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToSmallIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToBigIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToBigIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToBigIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToBigIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArray].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<int\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [IntArrayMax].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToBigIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToBigIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToTinyIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToTinyIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToTinyIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToTinyIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToSmallIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToSmallIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToSmallIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToSmallIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToIntArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToIntArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArray].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<].[ConvertTo];
+DROP FUNCTION [BigIntArrayMax].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealArray].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealArrayMax].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealArray].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealArrayMax].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::ShortArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealArray].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealArrayMax].[ConvertToFloatArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealArray].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<float\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::MaxArray\,double\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatArrayMax].[ConvertToFloatArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatArray].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatArrayMax].[ConvertToRealArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::ShortArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatArray].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::MaxArray\,float\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatArrayMax].[ConvertToRealArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatArray].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatArray].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatArrayMax].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatArray].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<double\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatArrayMax].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealComplexArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealComplexArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealComplexArray].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [RealComplexArrayMax].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealComplexArray].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [RealComplexArrayMax].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatComplexArray].[ConvertToFloatComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatComplexArrayMax].[ConvertToFloatComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatComplexArray].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>].[ConvertTo];
+DROP FUNCTION [FloatComplexArrayMax].[ConvertToRealComplexArray];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatComplexArray].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP FUNCTION [ArrayTypeConverter<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray\,Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>].[ConvertTo];
+DROP FUNCTION [FloatComplexArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
-DROP SCHEMA ArrayConcat<unsigned char\,Jhu::SqlServer::Array::ShortArray>;
+DROP SCHEMA TinyIntArray;
 GO
                     
 
-DROP SCHEMA ArrayConcat<unsigned char\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA TinyIntArrayMax;
 GO
                     
 
-DROP SCHEMA ArrayConcat<short\,Jhu::SqlServer::Array::ShortArray>;
+DROP SCHEMA SmallIntArray;
 GO
                     
 
-DROP SCHEMA ArrayConcat<short\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA SmallIntArrayMax;
 GO
                     
 
-DROP SCHEMA ArrayConcat<int\,Jhu::SqlServer::Array::ShortArray>;
+DROP SCHEMA IntArray;
 GO
                     
 
-DROP SCHEMA ArrayConcat<int\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA IntArrayMax;
 GO
                     
 
-DROP SCHEMA ArrayConcat<;
+DROP SCHEMA BigIntArray;
 GO
                     
 
-DROP SCHEMA ArrayConcat<float\,Jhu::SqlServer::Array::ShortArray>;
+DROP SCHEMA BigIntArrayMax;
 GO
                     
 
-DROP SCHEMA ArrayConcat<float\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA RealArray;
 GO
                     
 
-DROP SCHEMA ArrayConcat<double\,Jhu::SqlServer::Array::ShortArray>;
+DROP SCHEMA RealArrayMax;
 GO
                     
 
-DROP SCHEMA ArrayConcat<double\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA FloatArray;
 GO
                     
 
-DROP SCHEMA ArrayConcat<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>;
+DROP SCHEMA FloatArrayMax;
 GO
                     
 
-DROP SCHEMA ArrayConcat<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA RealComplexArray;
 GO
                     
 
-DROP SCHEMA ArrayConcat<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>;
+DROP SCHEMA RealComplexArrayMax;
 GO
                     
 
-DROP SCHEMA ArrayConcat<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA FloatComplexArray;
 GO
                     
 
-DROP SCHEMA ArrayConcatSubarrays<unsigned char\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<unsigned char\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<short\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<short\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<int\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<int\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<float\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<float\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<double\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<double\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayConcatSubarrays<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFFT<double\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<unsigned char\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<short\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<short\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<int\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<int\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<float\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<float\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<double\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<double\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<float>\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayFunctions<Jhu::SqlServer::Array::SqlComplex<double>\,Jhu::SqlServer::Array::MaxArray>;
-GO
-                    
-
-DROP SCHEMA ArrayLinalg<double\,Jhu::SqlServer::Array::ShortArray>;
-GO
-                    
-
-DROP SCHEMA ArrayLinalg<double\,Jhu::SqlServer::Array::MaxArray>;
+DROP SCHEMA FloatComplexArrayMax;
 GO
                     
 
