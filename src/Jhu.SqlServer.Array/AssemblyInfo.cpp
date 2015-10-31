@@ -14,9 +14,9 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyTitleAttribute("JhuSqlServerArray")];
 [assembly:AssemblyDescriptionAttribute("")];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("Microsoft")];
+[assembly:AssemblyCompanyAttribute("JHU, ELTE")];
 [assembly:AssemblyProductAttribute("JhuSqlServerArray")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) Microsoft 2010")];
+[assembly:AssemblyCopyrightAttribute("Copyright (c) 2010-15 Laszlo Dobos, JHU, ELTE")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 

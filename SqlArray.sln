@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Utilities", "Build Utilities", "{5138B2A5-CEC3-4608-911A-06270ABFF306}"
+	ProjectSection(SolutionItems) = preProject
+		install\build.bat = install\build.bat
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jhu.SqlServer.Array", "src\Jhu.SqlServer.Array\Jhu.SqlServer.Array.vcxproj", "{25770BE0-36BE-471B-A0D5-12AAFCFBC97B}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -19,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jhu.SqlServer.Array.Parser.Test", "src\Jhu.SqlServer.Array.Parser.Test\Jhu.SqlServer.Array.Parser.Test.csproj", "{FF1751D6-5D13-4475-A4C1-1E023D50D74F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateInstallScript", "build\GenerateInstallScript\GenerateInstallScript.csproj", "{279D8CFB-E61A-45FB-8E29-5AF4B1AE683A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25770BE0-36BE-471B-A0D5-12AAFCFBC97B} = {25770BE0-36BE-471B-A0D5-12AAFCFBC97B}
+		{69782CE9-B05E-4A7E-BCE5-9AB92ED289D7} = {69782CE9-B05E-4A7E-BCE5-9AB92ED289D7}
+	EndProjectSection
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Jhu.SqlServer.Array.Debug", "src\Jhu.SqlServer.Array.Debug\Jhu.SqlServer.Array.Debug.sqlproj", "{77A6B0F7-81E5-470B-8902-176F28253632}"
 EndProject
