@@ -221,15 +221,6 @@ GO
 
         static void ScriptCreateUDTs(StreamWriter createScript)
         {
-/*            createScript.WriteLine(@"
-CREATE TYPE dbo.SingleComplex
-EXTERNAL NAME [Jhu.SqlServer.Array].[Jhu.SqlServer.Array.SqlSingleComplex];
-GO
-
-CREATE TYPE dbo.DoubleComplex
-EXTERNAL NAME [Jhu.SqlServer.Array].[Jhu.SqlServer.Array.SqlDoubleComplex];
-GO");*/
-
             createScript.WriteLine(@"
 CREATE TYPE dbo.RealComplex
 EXTERNAL NAME [Jhu.SqlServer.Array].[Jhu.SqlServer.Array.SqlRealComplex];
@@ -243,13 +234,6 @@ GO");
 
         static void ScriptDropUDTs(StreamWriter dropScript)
         {
-            /*dropScript.WriteLine(@"
-DROP TYPE dbo.SingleComplex
-GO
-
-DROP TYPE dbo.DoubleComplex
-GO");*/
-
             dropScript.WriteLine(@"
 DROP TYPE dbo.RealComplex
 GO
@@ -440,21 +424,6 @@ GO
                 default:
                     throw new NotImplementedException();
             }
-
-            /*
-            if (t == typeof(byte)) return "tinyint";
-            if (t == typeof(byte*)) return "tinyint";
-            if (t == typeof(sbyte)) return "tinyint";
-            if (t == typeof(Int16)) return "smallint";
-            if (t == typeof(Int32)) return "int";
-            if (t == typeof(Int64)) return "bigint";
-            if (t == typeof(float)) return "real";
-            if (t == typeof(double)) return "float";
-            if (t == typeof(System.Data.SqlTypes.SqlBytes)) return "varbinary(max)";
-            if (t == typeof(System.Data.SqlTypes.SqlBinary)) return "varbinary(8000)";
-            if (t == typeof(System.Data.SqlTypes.SqlChars)) return "nvarchar(max)";
-
-            throw new NotImplementedException();*/
         }
 
         static string GetSchemaName(string classname)
@@ -478,27 +447,6 @@ GO
                     return classname.Substring(3);
                 }
             }
-
-            /*
-            // classname format: Sql...Functions
-            if (classname.EndsWith("Functions"))
-            {
-                return classname.Substring(3).Remove(classname.Length - 12);
-            }
-            else if (classname.EndsWith("Converter"))
-            {
-                string from, to;
-                GetConverterParts(classname, out from, out to);
-                return from;
-            }
-            else if (classname.EndsWith("Concat"))
-            {
-                return classname.Substring(3).Remove(classname.Length - 9);
-            }
-            else if (classname.EndsWith("ConcatSubarrays"))
-            {
-                return classname.Substring(3).Remove(classname.Length - 18);
-            }*/
 
             throw new NotImplementedException();
         }

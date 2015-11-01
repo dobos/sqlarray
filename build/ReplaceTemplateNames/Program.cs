@@ -24,9 +24,6 @@ namespace ReplaceTemplateNames
             StringBuilder b = new StringBuilder(File.ReadAllText(args[0]));
             Assembly a = Assembly.LoadFrom(args[1]);
 
-            //b.Replace("SqlComplex<float>", "SqlSingleComplex");
-            //b.Replace("SqlComplex<double>", "SqlDoubleComplex");
-
             b.Replace("SqlComplex<float>", "SqlRealComplex");
             b.Replace("SqlComplex<double>", "SqlFloatComplex");
 
