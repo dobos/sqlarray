@@ -30,7 +30,7 @@ namespace Jhu { namespace SqlServer { namespace Array
 
 	internal:
 		static const unsigned char HeaderType = 0;
-		static const int ConcatAggregateSize = -1;
+		static const int ArrayAggregateSize = -1;
 
 	internal:
 

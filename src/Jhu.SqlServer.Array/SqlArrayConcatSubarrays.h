@@ -30,7 +30,7 @@ namespace Jhu { namespace SqlServer { namespace Array
 		IsInvariantToNulls = true,
 		IsInvariantToDuplicates = false,
 		IsInvariantToOrder = false,
-		MaxByteSize = B::ConcatAggregateSize,
+		MaxByteSize = B::ArrayAggregateSize,
 		Name=L"ConcatSubarrays")]
 	public value class SqlArrayConcatSubarrays : IBinarySerialize
 	{

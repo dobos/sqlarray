@@ -209,6 +209,7 @@ REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
     <ClCompile Include="ShortArray.cpp" />
     <ClCompile Include="SqlArray.cpp" />
     <ClCompile Include="SqlArrayAttribute.cpp" />
+    <ClCompile Include="SqlArrayAvgArray.cpp" />
     <ClCompile Include="SqlArrayConcat.cpp" />
     <ClCompile Include="SqlArrayConcatSubarrays.cpp" />
     <ClCompile Include="SqlArrayEnumerator.cpp" />
@@ -220,6 +221,7 @@ REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
     <ClCompile Include="SqlArrayMatrixEnumerator.cpp" />
     <ClCompile Include="SqlArraySliceEnumerator.cpp" />
     <ClCompile Include="SqlArraySubarrayEnumerator.cpp" />
+    <ClCompile Include="SqlArraySumArray.cpp" />
     <ClCompile Include="SqlArrayTest.cpp" />
     <ClCompile Include="SqlArrayTypeConverter.cpp" />
     <ClCompile Include="SqlArrayTypeConverterAttribute.cpp" />
@@ -241,6 +243,7 @@ REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
     <ClInclude Include="ShortArray.h" />
     <ClInclude Include="SqlArray.h" />
     <ClInclude Include="SqlArrayAttribute.h" />
+    <ClInclude Include="SqlArrayAvgArray.h" />
     <ClInclude Include="SqlArrayConcat.h" />
     <ClInclude Include="SqlArrayConcatSubarrays.h" />
     <ClInclude Include="SqlArrayEnumerator.h" />
@@ -253,6 +256,7 @@ REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
     <ClInclude Include="SqlArrayMatrixEnumerator.h" />
     <ClInclude Include="SqlArraySliceEnumerator.h" />
     <ClInclude Include="SqlArraySubarrayEnumerator.h" />
+    <ClInclude Include="SqlArraySumArray.h" />
     <ClInclude Include="SqlArrayTest.h" />
     <ClInclude Include="SqlArrayTypeConverter.h" />
     <ClInclude Include="SqlArrayTypeConverterAttribute.h" />

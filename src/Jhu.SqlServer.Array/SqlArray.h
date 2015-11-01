@@ -279,7 +279,7 @@ namespace Jhu { namespace SqlServer { namespace Array
 		/// <summary>
 		/// Gets the total number of items in an array
 		/// </summary>
-		internal: typename B::IndexT GetTotalLength(array<typename B::IndexT>^ length);
+		internal: static typename B::IndexT GetTotalLength(array<typename B::IndexT>^ length);
 
 
 		/// <summary>
@@ -538,6 +538,11 @@ namespace Jhu { namespace SqlServer { namespace Array
 		/// Creates a SQL Server array from a string representation.
 		/// </summary>
 		public: static SqlArray<T, B> FromString(String^ data);
+
+		/// <summary>
+		/// Creates a SQL Server array with a given size of all zeros
+		/// </summary>
+		public: static SqlArray<T, B> Zeros(array<typename B::IndexT>^ length);
 
 #pragma endregion
 	};
