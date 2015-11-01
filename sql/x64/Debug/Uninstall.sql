@@ -1,5 +1,21 @@
 -- Drop assembly and debug symbols
--- 2015.10.31. 22:38:18
+-- 2015.11.01. 11:24:28
+
+DROP AGGREGATE [RealArray].[AvgArray];
+GO
+
+
+DROP AGGREGATE [RealArrayMax].[AvgArray];
+GO
+
+
+DROP AGGREGATE [FloatArray].[AvgArray];
+GO
+
+
+DROP AGGREGATE [FloatArrayMax].[AvgArray];
+GO
+
 
 DROP AGGREGATE [TinyIntArray].[Concat];
 GO
@@ -5777,6 +5793,70 @@ DROP FUNCTION [FloatArrayMax].[SVD];
 GO
 
 
+DROP AGGREGATE [TinyIntArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [TinyIntArrayMax].[SumArray];
+GO
+
+
+DROP AGGREGATE [SmallIntArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [SmallIntArrayMax].[SumArray];
+GO
+
+
+DROP AGGREGATE [IntArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [IntArrayMax].[SumArray];
+GO
+
+
+DROP AGGREGATE [BigIntArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [BigIntArrayMax].[SumArray];
+GO
+
+
+DROP AGGREGATE [RealArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [RealArrayMax].[SumArray];
+GO
+
+
+DROP AGGREGATE [FloatArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [FloatArrayMax].[SumArray];
+GO
+
+
+DROP AGGREGATE [RealComplexArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [RealComplexArrayMax].[SumArray];
+GO
+
+
+DROP AGGREGATE [FloatComplexArray].[SumArray];
+GO
+
+
+DROP AGGREGATE [FloatComplexArrayMax].[SumArray];
+GO
+
+
 DROP FUNCTION [FloatArray].[ConvertToFloatArrayMax];
 GO
 
@@ -6401,6 +6481,22 @@ DROP FUNCTION [FloatComplexArrayMax].[ConvertToRealComplexArrayMax];
 GO
 
 
+DROP SCHEMA RealArray;
+GO
+                    
+
+DROP SCHEMA RealArrayMax;
+GO
+                    
+
+DROP SCHEMA FloatArray;
+GO
+                    
+
+DROP SCHEMA FloatArrayMax;
+GO
+                    
+
 DROP SCHEMA TinyIntArray;
 GO
                     
@@ -6430,22 +6526,6 @@ GO
                     
 
 DROP SCHEMA BigIntArrayMax;
-GO
-                    
-
-DROP SCHEMA RealArray;
-GO
-                    
-
-DROP SCHEMA RealArrayMax;
-GO
-                    
-
-DROP SCHEMA FloatArray;
-GO
-                    
-
-DROP SCHEMA FloatArrayMax;
 GO
                     
 
