@@ -43,20 +43,26 @@ namespace Jhu { namespace SqlServer { namespace Array
 	template <class T>
 	SqlComplex<T> SqlComplex<T>::Parse(SqlString value)
 	{
-		Regex^ cn =	gcnew Regex(
-				"\\G([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)(?:\\s*([+-])\\s*([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)i)?",
-				RegexOptions::Compiled);
+		return ParseImpl(value, System::Globalization::CultureInfo::InvariantCulture);
+	}
+
+	template <class T>
+	SqlComplex<T> SqlComplex<T>::ParseImpl(SqlString value, System::IFormatProvider^ provider)
+	{
+		Regex^ cn = gcnew Regex(
+			"\\G([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)(?:\\s*([+-])\\s*([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)i)?",
+			RegexOptions::Compiled);
 
 		Match^ m = cn->Match(value.Value);
 
 		if (m->Success)
 		{
 			T re = T::Parse(m->Groups[1]->Value);
-			
+
 			if (m->Groups[2]->Success)
 			{
 				T sign = m->Groups[2]->Value == "+" ? (T)1 : (T)-1;
-				T im = T::Parse(m->Groups[3]->Value);
+				T im = T::Parse(m->Groups[3]->Value, provider);
 				return SqlComplex<T>(re, sign * im);
 			}
 			else
@@ -64,7 +70,7 @@ namespace Jhu { namespace SqlServer { namespace Array
 				return SqlComplex<T>(re, 0);
 			}
 
-			
+
 		}
 		else
 		{

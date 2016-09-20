@@ -1,5 +1,5 @@
 -- Drop assembly and debug symbols
--- 2015.11.01. 11:35:05
+-- 2016.09.20. 18:07:35
 
 DROP AGGREGATE [RealArray].[AvgArray];
 GO

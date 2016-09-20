@@ -119,9 +119,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Jhu.SqlServer.Array">
-      <HintPath>..\..\x64\Debug\Jhu.SqlServer.Array.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -168,7 +165,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>"$(TargetPath)" "$(SolutionDir)sql\$(PlatformName)\$(ConfigurationName)\Install.sql" "$(SolutionDir)sql\$(PlatformName)\$(ConfigurationName)\Uninstall.sql"
-"$(SolutionDir)\install\build.bat" "$(SolutionDir)" "$(PlatformName)" "$(ConfigurationName)" "1.0"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

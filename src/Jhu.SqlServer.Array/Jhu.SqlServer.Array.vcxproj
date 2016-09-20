@@ -138,9 +138,12 @@ REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
     </Link>
     <PostBuildEvent>
       <Command>copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.orig"
-"$(FrameworkSDKDir)\Bin\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
+"$(TargetFrameworkSDKToolsDirectory)ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
 "$(SolutionDir)build\ReplaceTemplateNames\bin\x64\Release\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
-"C:\Windows\Microsoft.NET\Framework64\v2.0.50727\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)\..\..\keys\SqlArray.snk"
+"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)\..\..\keys\SqlArray.snk" /QUIET
+
+"$(SolutionDir)build\GenerateInstallScript\bin\$(PlatformName)\$(ConfigurationName)\GenerateInstallScript.exe" "$(TargetPath)" "$(SolutionDir)sql\$(PlatformName)\$(ConfigurationName)\Install.sql" "$(SolutionDir)sql\$(PlatformName)\$(ConfigurationName)\Uninstall.sql"
+"$(SolutionDir)install\build.bat" "$(SolutionDir)" "$(PlatformName)" "$(ConfigurationName)" "1.0"
 
 REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
 REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
@@ -149,7 +152,12 @@ REM --- Replace IL symbols with original ones
 REM copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.il"
 REM del "$(OutDir)$(TargetName).pdb"
 REM ren "$(OutDir)$(TargetName).pdb.orig" $(TargetName).pdb
-</Command>
+
+
+REM copy "$(OutDir)$(TargetName).pdb" "$(OutDir)$(TargetName).pdb.orig"
+REM "$(TargetFrameworkSDKToolsDirectory)ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
+REM "$(SolutionDir)build\ReplaceTemplateNames\bin\x64\Release\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
+REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)\..\..\keys\SqlArray.snk"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">

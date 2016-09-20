@@ -61,6 +61,9 @@ namespace Jhu { namespace SqlServer { namespace Array
 
 	public:
 		static SqlComplex Parse(SqlString value);
+
+	internal:
+		static SqlComplex ParseImpl(SqlString value, System::IFormatProvider^ provider);
 	};
 	
 } } }

@@ -5,7 +5,6 @@ using System.Text;
 using System.IO;
 using System.Reflection;
 using Microsoft.SqlServer.Server;
-using Jhu.SqlServer.Array;
 
 namespace GenerateInstallScript
 {
@@ -15,11 +14,13 @@ namespace GenerateInstallScript
         {
             Console.WriteLine("Generating install/uninstall scripts...");
 
-            // Command line arguments: 0: Create script
-            //                         1: Drop script
+            // Command line arguments: 0: Input DLL
+            //                         1: Create script
+            //                         2: Drop script
 
-            string createfilename = args[0];
-            string dropfilename = args[1];
+            string dllfilename = args[0];
+            string createfilename = args[1];
+            string dropfilename = args[2];
 
             CreateDirectory(createfilename);
             CreateDirectory(dropfilename);
@@ -30,8 +31,8 @@ namespace GenerateInstallScript
                 using (StreamWriter dropScript = new StreamWriter(dropfilename))
                 {
                     // Open assembly for reflection
-                    Assembly a = typeof(SqlArrayAttribute).Assembly;
-
+                    var a = LoadAssembly(dllfilename);
+                    
                     ScriptHeader(createScript, dropScript);
                     ScriptCreateAssembly(createScript, a);
                     ScriptCreateUDTs(createScript);
@@ -40,6 +41,17 @@ namespace GenerateInstallScript
                     ScriptDropAssembly(dropScript, a);
                 }
             }
+        }
+
+        private static Assembly LoadAssembly(string path)
+        {
+            return Assembly.LoadFrom(path);
+        }
+
+        private static Assembly LoadReferencedAssembly(Assembly referencingAssembly, AssemblyName an)
+        {
+            var path = Path.Combine(Path.GetDirectoryName(referencingAssembly.Location), an.Name) + ".dll";
+            return Assembly.LoadFrom(path);
         }
 
         static void CreateDirectory(string filename)
@@ -67,7 +79,7 @@ namespace GenerateInstallScript
             {
                 if (an.Name.StartsWith("Jhu."))
                 {
-                    Assembly aa = Assembly.Load(an);
+                    Assembly aa = LoadReferencedAssembly(a, an);
                     ScriptCreateAssembly(createScript, aa.Location);
                 }
             }
@@ -113,7 +125,7 @@ GO
             {
                 if (an.Name.StartsWith("Jhu."))
                 {
-                    Assembly aa = Assembly.Load(an);
+                    Assembly aa = LoadReferencedAssembly(a, an);
                     ScriptDropAssembly(dropScript, aa.Location);
                 }
             }
@@ -129,16 +141,28 @@ GO
             ", Path.GetFileNameWithoutExtension(filename));
         }
 
+        private static bool HasAttribute(Type t, string attribute)
+        {
+            var data = t.GetCustomAttributesData();
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                if (data[i].AttributeType.FullName == attribute)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         static void EnumerateTypes(StreamWriter createScript, StreamWriter dropScript, Assembly a)
         {
             HashSet<string> schemas = new HashSet<string>();
 
             foreach (Type t in a.GetTypes())
             {
-                SqlArrayAttribute saattr =
-                    (SqlArrayAttribute)t.GetCustomAttributes(typeof(SqlArrayAttribute), false).FirstOrDefault();
-
-                if (saattr != null)
+                if (HasAttribute(t, "Jhu.SqlServer.Array.SqlArrayAttribute"))
                 {
                     // Create schema for the functions
                     string schemaname = GetSchemaName(t.Name);
@@ -156,17 +180,11 @@ GO
                     EnumerateMethods(createScript, dropScript, t);
                 }
 
-                SqlArrayTypeConverterAttribute acattr =
-                    (SqlArrayTypeConverterAttribute)t.GetCustomAttributes(typeof(SqlArrayTypeConverterAttribute), false).FirstOrDefault();
 
-                if (acattr != null)
+                if (HasAttribute(t, "Jhu.SqlServer.Array.SqlArrayTypeConverterAttribute"))
                 {
                     EnumerateMethods(createScript, dropScript, t);
                 }
-
-                //SqlUserDefinedAggregateAttribute aggattr =
-                //    (SqlUserDefinedAggregateAttribute)t.GetCustomAttributes(typeof(SqlUserDefinedAggregateAttribute), false).FirstOrDefault();
-
 
                 bool isaggregate = false;
                 int attrsize = 0;
