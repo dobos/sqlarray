@@ -10,19 +10,26 @@ namespace Jhu.SqlServer.Array.Parser
         TokenType type;
         Token token;
 
+        private string tokenSeparator;
+        private string decimalPoint;
+
         public Token Token
         {
             get { return token; }
         }
 
-        public TokenNode(TokenType type)
+        //The tokenSeparator only needs to be specified when aType==TokenType.Separator
+        //The decimalPoint only needs to be specified when aType==TokenType.Number or aType==TokenType.ComplexNumber
+        public TokenNode(TokenType aType, string aTokenSeparator = null, string aDecimalPoint = null)
         {
-            this.type = type;
+            type = aType;
+            tokenSeparator = aTokenSeparator;
+            decimalPoint = aDecimalPoint;
         }
 
         public override bool Match(ref string buffer, ref int position)
         {
-            token = Token.Match(type, ref buffer, position);
+            token = Token.Match(type, ref buffer, position, tokenSeparator, decimalPoint);
             if (token.Type != TokenType.Null)
             {
                 this.position = token.Position;

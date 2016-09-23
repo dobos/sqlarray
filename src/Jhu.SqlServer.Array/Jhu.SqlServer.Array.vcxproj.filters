@@ -96,6 +96,9 @@
     <ClCompile Include="SqlArraySumArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SqlArrayCultureFormatter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="enum.h">
@@ -186,6 +189,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SqlArraySumArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SqlArrayCultureFormatter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

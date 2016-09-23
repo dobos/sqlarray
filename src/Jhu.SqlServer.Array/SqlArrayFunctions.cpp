@@ -9,13 +9,25 @@ namespace Jhu { namespace SqlServer { namespace Array
 	template <class T, class B>
 	SqlChars^ SqlArrayFunctions<T, B>::GetString(typename B::SqlBufferT data)
 	{
-		return gcnew SqlChars(SqlArray<T, B>(data, ArrayLoadMethod::AllData).ToString());
+		return gcnew SqlChars(SqlArray<T, B>(data, ArrayLoadMethod::AllData).ToString(Globalization::CultureInfo::CurrentCulture));
+	}
+
+	template <class T, class B>
+	SqlChars^ SqlArrayFunctions<T, B>::GetStringInvariant(typename B::SqlBufferT data)
+	{
+		return gcnew SqlChars(SqlArray<T, B>(data, ArrayLoadMethod::AllData).ToString(Globalization::CultureInfo::InvariantCulture));
 	}
 
 	template <class T, class B>
 	typename B::SqlBufferT SqlArrayFunctions<T, B>::Parse(SqlChars^ data)
 	{
-		return SqlArray<T, B>::FromString(data->ToSqlString().Value).ToSqlBuffer();
+		return SqlArray<T, B>::FromString(data->ToSqlString().Value, Globalization::CultureInfo::CurrentCulture).ToSqlBuffer();
+	}
+
+	template <class T, class B>
+	typename B::SqlBufferT SqlArrayFunctions<T, B>::ParseInvariant(SqlChars^ data)
+	{
+		return SqlArray<T, B>::FromString(data->ToSqlString().Value, Globalization::CultureInfo::InvariantCulture).ToSqlBuffer();
 	}
 	
 #pragma endregion

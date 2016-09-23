@@ -36,17 +36,30 @@ namespace Jhu { namespace SqlServer { namespace Array
 #pragma region String conversion functions
 
 		/// <summary>
-		/// Returns the string representation of the array.
+		/// Returns the string representation of the array (using the current culture format).
 		/// </summary>
 		[SqlFunction(DataAccess = DataAccessKind::None, SystemDataAccess = SystemDataAccessKind::None, IsDeterministic = true,
 			Name=L"ToString")]
 		static SqlChars^ GetString(typename B::SqlBufferT data);
 
 		/// <summary>
-		/// Converts the string representation into an array.
+		/// Returns the string representation of the array (using the invariant culture format).
+		/// </summary>
+		[SqlFunction(DataAccess = DataAccessKind::None, SystemDataAccess = SystemDataAccessKind::None, IsDeterministic = true,
+			Name = L"ToStringInvariant")]
+		static SqlChars^ GetStringInvariant(typename B::SqlBufferT data);
+
+		/// <summary>
+		/// Converts the string representation into an array (using the current culture format).
 		/// </summary>
 		[SqlFunction(DataAccess = DataAccessKind::None, SystemDataAccess = SystemDataAccessKind::None, IsDeterministic = true)]
 		static typename B::SqlBufferT Parse(SqlChars^ data);
+
+		/// <summary>
+		/// Converts the string representation into an array (using the invariant culture format).
+		/// </summary>
+		[SqlFunction(DataAccess = DataAccessKind::None, SystemDataAccess = SystemDataAccessKind::None, IsDeterministic = true)]
+		static typename B::SqlBufferT ParseInvariant(SqlChars^ data);
 
 #pragma endregion
 #pragma region Basic array constructors

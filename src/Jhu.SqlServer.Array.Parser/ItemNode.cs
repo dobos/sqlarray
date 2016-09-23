@@ -9,6 +9,13 @@ namespace Jhu.SqlServer.Array.Parser
     {
         private TokenNode nm;
 
+        private string decimalPoint;
+
+        public ItemNode(string aDecimalPoint = ".")
+        {
+            decimalPoint = aDecimalPoint;
+        }
+
         public TokenNode Number
         {
             get { return nm; }
@@ -19,14 +26,14 @@ namespace Jhu.SqlServer.Array.Parser
             TokenNode ws1 = new TokenNode(TokenType.Whitespace);
             if (MatchNode(ws1, ref buffer, ref position))
             {
-                nm = new TokenNode(TokenType.ComplexNumber);
+                nm = new TokenNode(TokenType.ComplexNumber, null, decimalPoint);
                 if (MatchNode(nm, ref buffer, ref position))
                 {
                     return true;
                 }
                 else
                 {
-                    nm = new TokenNode(TokenType.Number);
+                    nm = new TokenNode(TokenType.Number, null, decimalPoint);
                     if (MatchNode(nm, ref buffer, ref position))
                     {
                         return true;

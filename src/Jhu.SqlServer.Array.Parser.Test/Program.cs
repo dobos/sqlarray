@@ -10,7 +10,7 @@ namespace Jhu.SqlServer.Array.Parser.Test
     {
         static void Main(string[] args)
         {
-            ArrayParser p = new ArrayParser();
+            ArrayParser p = new ArrayParser(",", ".");
 
             string[] buffer = {
                                   "[ 1,2,-3.13e-9 ]",

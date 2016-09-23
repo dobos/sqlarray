@@ -35,6 +35,10 @@ namespace Jhu { namespace SqlServer { namespace Array
 		SqlComplex(T re, T im) : Re(re), Im(im) {};
 
 		virtual String^ ToString() override;
+		virtual String^ ToStringInvariant();
+
+	internal:
+		virtual String^ ToStringWithProvider(IFormatProvider^ provider);
 
 		// Operators
 	public:
@@ -61,9 +65,10 @@ namespace Jhu { namespace SqlServer { namespace Array
 
 	public:
 		static SqlComplex Parse(SqlString value);
+		static SqlComplex ParseInvariant(SqlString value);
 
 	internal:
-		static SqlComplex ParseImpl(SqlString value, System::IFormatProvider^ provider);
+		static SqlComplex ParseWithProvider(SqlString value, IFormatProvider^ provider);
 	};
 	
 } } }

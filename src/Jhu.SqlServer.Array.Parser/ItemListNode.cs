@@ -11,6 +11,15 @@ namespace Jhu.SqlServer.Array.Parser
         private ItemListNode il;
         private bool hasNextItemList = false;
 
+        private string tokenSeparator;
+        private string decimalPoint;
+
+        public ItemListNode(string aTokenSeparator = ",", string aDecimalPoint = ".")
+        {
+            tokenSeparator = aTokenSeparator;
+            decimalPoint = aDecimalPoint;
+        }
+
         public ItemNode ItemNode
         {
             get { return it; }
@@ -21,17 +30,17 @@ namespace Jhu.SqlServer.Array.Parser
             TokenNode ws1 = new TokenNode(TokenType.Whitespace);
             if (MatchNode(ws1, ref buffer, ref position))
             {
-                it = new ItemNode();
+                it = new ItemNode(decimalPoint);
                 if (MatchNode(it, ref buffer, ref position))
                 {
                     // Optionally match
                     TokenNode ws2 = new TokenNode(TokenType.Whitespace);
                     if (MatchNode(ws2, ref buffer, ref position))
                     {
-                        TokenNode sp = new TokenNode(TokenType.Separator);
+                        TokenNode sp = new TokenNode(TokenType.Separator, tokenSeparator);
                         if (MatchNode(sp, ref buffer, ref position))
                         {
-                            il = new ItemListNode();
+                            il = new ItemListNode(tokenSeparator, decimalPoint);
                             if (MatchNode(il, ref buffer, ref position))
                             {
                                 hasNextItemList = true;

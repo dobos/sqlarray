@@ -8,10 +8,19 @@ namespace Jhu { namespace SqlServer { namespace Array
 	template <class T>
 	String^ SqlComplex<T>::ToString()
 	{
-		return String::Format("{0:0.0000} {2} {1:0.0000}i",
-			Re,
-			Math::Abs(Im),
-			Math::Sign(Im) < 0 ? "-" : "+");
+		return ToStringWithProvider(Globalization::CultureInfo::CurrentCulture);
+	}
+
+	template <class T>
+	String^ SqlComplex<T>::ToStringInvariant()
+	{
+		return ToStringWithProvider(Globalization::CultureInfo::InvariantCulture);
+	}
+
+	template <class T>
+	String^ SqlComplex<T>::ToStringWithProvider(IFormatProvider^ provider)
+	{
+		return Re.ToString(provider) + (Math::Sign(Im) < 0 ? " - " : " + ") + Math::Abs(Im).ToString(provider) + "i";
 	}
 
 	template <class T>
@@ -43,11 +52,17 @@ namespace Jhu { namespace SqlServer { namespace Array
 	template <class T>
 	SqlComplex<T> SqlComplex<T>::Parse(SqlString value)
 	{
-		return ParseImpl(value, System::Globalization::CultureInfo::InvariantCulture);
+		return ParseWithProvider(value, Globalization::CultureInfo::CurrentCulture);
 	}
 
 	template <class T>
-	SqlComplex<T> SqlComplex<T>::ParseImpl(SqlString value, System::IFormatProvider^ provider)
+	SqlComplex<T> SqlComplex<T>::ParseInvariant(SqlString value)
+	{
+		return ParseWithProvider(value, Globalization::CultureInfo::InvariantCulture);
+	}
+
+	template <class T>
+	SqlComplex<T> SqlComplex<T>::ParseWithProvider(SqlString value, System::IFormatProvider^ provider)
 	{
 		Regex^ cn = gcnew Regex(
 			"\\G([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)(?:\\s*([+-])\\s*([-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)i)?",
@@ -57,7 +72,7 @@ namespace Jhu { namespace SqlServer { namespace Array
 
 		if (m->Success)
 		{
-			T re = T::Parse(m->Groups[1]->Value);
+			T re = T::Parse(m->Groups[1]->Value, provider);
 
 			if (m->Groups[2]->Success)
 			{

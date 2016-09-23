@@ -102,6 +102,9 @@
 "$(SolutionDir)build\ReplaceTemplateNames\bin\x64\Debug\ReplaceTemplateNames.exe" "$(OutDir)$(TargetFileName).il" "$(OutDir)$(TargetFileName)"
 "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /DEBUG /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)" /KEY="$(ProjectDir)..\..\keys\SqlArray.snk"
 
+"$(SolutionDir)build\GenerateInstallScript\bin\$(PlatformName)\$(ConfigurationName)\GenerateInstallScript.exe" "$(TargetPath)" "$(SolutionDir)sql\$(PlatformName)\$(ConfigurationName)\Install.sql" "$(SolutionDir)sql\$(PlatformName)\$(ConfigurationName)\Uninstall.sql"
+"$(SolutionDir)install\build.bat" "$(SolutionDir)" "$(PlatformName)" "$(ConfigurationName)" "1.0"
+
 REM "C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\NETFX 4.0 Tools\x64\ildasm.exe" "$(OutDir)$(TargetFileName)" /OUT="$(OutDir)$(TargetFileName).il" /ALL /NOBAR
 REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
 REM $(FrameworkDir)\$(FrameworkVersion)\ilasm.exe" "$(OutDir)$(TargetFileName).il" /RESOURCE="$(OutDir)$(TargetFileName).res" /PDB /X64 /DLL /OUTPUT="$(OutDir)$(TargetFileName)"
@@ -220,6 +223,7 @@ REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(Targ
     <ClCompile Include="SqlArrayAvgArray.cpp" />
     <ClCompile Include="SqlArrayConcat.cpp" />
     <ClCompile Include="SqlArrayConcatSubarrays.cpp" />
+    <ClCompile Include="SqlArrayCultureFormatter.cpp" />
     <ClCompile Include="SqlArrayEnumerator.cpp" />
     <ClCompile Include="SqlArrayException.cpp" />
     <ClCompile Include="SqlArrayFFT.cpp" />
@@ -254,6 +258,7 @@ REM "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ilasm.exe" "$(OutDir)$(Targ
     <ClInclude Include="SqlArrayAvgArray.h" />
     <ClInclude Include="SqlArrayConcat.h" />
     <ClInclude Include="SqlArrayConcatSubarrays.h" />
+    <ClInclude Include="SqlArrayCultureFormatter.h" />
     <ClInclude Include="SqlArrayEnumerator.h" />
     <ClInclude Include="SqlArrayException.h" />
     <ClInclude Include="SqlArrayFFT.h" />

@@ -11,6 +11,15 @@ namespace Jhu.SqlServer.Array.Parser
         private ItemListNode il;
         private SubArrayListNode sa;
 
+        private string tokenSeparator;
+        private string decimalPoint;
+
+        public ArrayNode(string aTokenSeparator = ",", string aDecimalPoint = ".")
+        {
+            tokenSeparator = aTokenSeparator;
+            decimalPoint = aDecimalPoint;
+        }
+
         public bool HasSubarray
         {
             get { return hasSubarray; }
@@ -36,7 +45,7 @@ namespace Jhu.SqlServer.Array.Parser
                 {
                     bool alt = false;
 
-                    il = new ItemListNode();
+                    il = new ItemListNode(tokenSeparator, decimalPoint);
                     if (MatchNode(il, ref buffer, ref position))
                     {
                         hasSubarray = false;
@@ -44,7 +53,7 @@ namespace Jhu.SqlServer.Array.Parser
                     }
                     else
                     {
-                        sa = new SubArrayListNode();
+                        sa = new SubArrayListNode(tokenSeparator, decimalPoint);
                         if (MatchNode(sa, ref buffer, ref position))
                         {
                             hasSubarray = true;

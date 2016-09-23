@@ -13,6 +13,7 @@
 
 using namespace System;
 using namespace System::Text;
+using namespace System::Globalization;
 using namespace System::Collections::Generic;
 using namespace System::Data::SqlTypes;
 using namespace Microsoft::SqlServer::Server;
@@ -393,14 +394,20 @@ namespace Jhu { namespace SqlServer { namespace Array
 		public: array<T>^ ToArray();
 
 		/// <summary>
-		/// Returns the string representation of the array.
+		/// Returns the string representation of the array, using the current culture format
 		/// </summary>
+		//This is here because a default parameter cannot be specified in C++/CLI for the culture
 		public: virtual String^ ToString() override;
+
+		/// <summary>
+		/// Returns the string representation of the array, using a specified culture format
+		/// </summary>
+		public: virtual String^ ToString(CultureInfo^ culture);
 
 		/// <summary>
 		/// Internal function called recursively by ToString
 		/// </summary>
-		public: interior_ptr<T> ToString_Subarray(StringBuilder^ sb, interior_ptr<typename B::IndexT> lp, interior_ptr<T> dp, typename B::RankT r);
+		public: interior_ptr<T> ToString_Subarray(StringBuilder^ sb, interior_ptr<typename B::IndexT> lp, interior_ptr<T> dp, typename B::RankT r, CultureInfo^ culture);
 
 		/// <summary>
 		/// Internal function called recursively by FromArray
@@ -535,9 +542,15 @@ namespace Jhu { namespace SqlServer { namespace Array
 		public: static SqlArray<T, B> FromArray(System::Array^ data);
 
 		/// <summary>
-		/// Creates a SQL Server array from a string representation.
+		/// Creates a SQL Server array from a string representation, using the current culture format
 		/// </summary>
+		//This is here because a default parameter cannot be specified in C++/CLI for the culture
 		public: static SqlArray<T, B> FromString(String^ data);
+
+		/// <summary>
+		/// Creates a SQL Server array from a string representation, using a specified culture format
+		/// </summary>
+		public: static SqlArray<T, B> FromString(String^ data, CultureInfo^ culture);
 
 		/// <summary>
 		/// Creates a SQL Server array with a given size of all zeros

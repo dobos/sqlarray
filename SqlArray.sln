@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Utilities", "Build Utilities", "{5138B2A5-CEC3-4608-911A-06270ABFF306}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,7 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jhu.SqlServer.Array", "src\Jhu.SqlServer.Array\Jhu.SqlServer.Array.vcxproj", "{25770BE0-36BE-471B-A0D5-12AAFCFBC97B}"
 	ProjectSection(ProjectDependencies) = postProject
 		{69782CE9-B05E-4A7E-BCE5-9AB92ED289D7} = {69782CE9-B05E-4A7E-BCE5-9AB92ED289D7}
+		{279D8CFB-E61A-45FB-8E29-5AF4B1AE683A} = {279D8CFB-E61A-45FB-8E29-5AF4B1AE683A}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceTemplateNames", "build\ReplaceTemplateNames\ReplaceTemplateNames.csproj", "{69782CE9-B05E-4A7E-BCE5-9AB92ED289D7}"
@@ -23,7 +24,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jhu.SqlServer.Array.Parser.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateInstallScript", "build\GenerateInstallScript\GenerateInstallScript.csproj", "{279D8CFB-E61A-45FB-8E29-5AF4B1AE683A}"
 	ProjectSection(ProjectDependencies) = postProject
-		{25770BE0-36BE-471B-A0D5-12AAFCFBC97B} = {25770BE0-36BE-471B-A0D5-12AAFCFBC97B}
 		{69782CE9-B05E-4A7E-BCE5-9AB92ED289D7} = {69782CE9-B05E-4A7E-BCE5-9AB92ED289D7}
 	EndProjectSection
 EndProject

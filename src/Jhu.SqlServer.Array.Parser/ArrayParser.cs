@@ -7,6 +7,19 @@ namespace Jhu.SqlServer.Array.Parser
 {
     public class ArrayParser
     {
+        private string tokenSeparator;
+        private string decimalPoint;
+
+        /// <summary>
+        /// Creates the ArrayParser object, with an optionally specified list separator string
+        /// </summary>
+        /// <param name="aTokenSeparator">The string that separates fields in the list, default: ","</param>
+        public ArrayParser(string aTokenSeparator=",", string aDecimalPoint=".")
+        {
+            tokenSeparator = aTokenSeparator;
+            decimalPoint = aDecimalPoint;
+        }
+
         /// <summary>
         /// Returns the rank length of the parser array and a consecutive
         /// list of tokens
@@ -18,7 +31,7 @@ namespace Jhu.SqlServer.Array.Parser
         {
             // Math an array node at the beginning
             int position = 0;
-            ArrayNode root = new ArrayNode();
+            ArrayNode root = new ArrayNode(tokenSeparator, decimalPoint);
             bool res = root.Match(ref buffer, ref position);
 
             // Trailing white spaces

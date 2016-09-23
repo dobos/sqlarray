@@ -8,8 +8,9 @@ namespace Jhu.SqlServer.Array.Parser
 {
     public struct Token
     {
-        private static readonly Regex DoubleNumber = new Regex(@"\G[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?", RegexOptions.Compiled);
-        private static readonly Regex ComplexNumber = new Regex(@"\G([-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)(?:\s*([+-])\s*([-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)i)?", RegexOptions.Compiled);
+
+        //private static readonly Regex DoubleNumber = new Regex(@"\G[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?", RegexOptions.Compiled);
+        //private static readonly Regex ComplexNumber = new Regex(@"\G([-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)(?:\s*([+-])\s*([-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)i)?", RegexOptions.Compiled);
 
         public TokenType Type;
         public int Position;
@@ -33,7 +34,7 @@ namespace Jhu.SqlServer.Array.Parser
             }
         }
 
-        public static Token Match(TokenType type, ref string buffer, int position)
+        public static Token Match(TokenType type, ref string buffer, int position, string tokenSeparator, string decimalPoint)
         {
             // Try to match the given token
             switch (type)
@@ -43,7 +44,7 @@ namespace Jhu.SqlServer.Array.Parser
                 case TokenType.RightBracket:
                     return MatchRightBracket(ref buffer, position);
                 case TokenType.Separator:
-                    return MatchSeparator(ref buffer, position);
+                    return MatchSeparator(ref buffer, position, tokenSeparator);
                 case TokenType.Whitespace:
                     return MatchWhitespace(ref buffer, position);
 /*                case TokenType.PlusOperator:
@@ -51,11 +52,11 @@ namespace Jhu.SqlServer.Array.Parser
                 case TokenType.MinusOperator:
                     return MatchMinusOperator(ref buffer, position);*/
                 case TokenType.Number:
-                    return MatchNumber(ref buffer, position);
+                    return MatchNumber(ref buffer, position, decimalPoint);
 /*                case TokenType.ImaginaryUnit:
                     return MatchImaginaryUnit(ref buffer, position);*/
                 case TokenType.ComplexNumber:
-                    return MatchComplexNumber(ref buffer, position);
+                    return MatchComplexNumber(ref buffer, position, decimalPoint);
                 default:
                     throw new NotImplementedException();
             }
@@ -85,11 +86,17 @@ namespace Jhu.SqlServer.Array.Parser
             }
         }
 
-        private static Token MatchSeparator(ref string buffer, int position)
+        private static Token MatchSeparator(ref string buffer, int position, string tokenSeparator)
         {
-            if (buffer[position] == ',')
+            int p = position;
+            while (p < buffer.Length && (p - position) < tokenSeparator.Length && buffer[p] == tokenSeparator[p - position])
             {
-                return new Token(TokenType.Separator, position, 1);
+                p++;
+            }
+
+            if (p == (position + tokenSeparator.Length) && tokenSeparator.Length > 0)
+            {
+                return new Token(TokenType.Separator, position, tokenSeparator.Length);
             }
             else
             {
@@ -140,8 +147,20 @@ namespace Jhu.SqlServer.Array.Parser
             }
         }*/
 
-        private static Token MatchNumber(ref string buffer, int position)
+        private static Token MatchNumber(ref string buffer, int position, string decimalPoint)
         {
+            string decimalCharList ="";
+            foreach (char c in decimalPoint)
+            {
+                decimalCharList+=(@"\"+c);
+            }
+
+            string doubleNumberRegexStr=@"\G[-+]?[0-9]*" + 
+                                        decimalCharList + 
+                                        @"?[0-9]+([eE][-+]?[0-9]+)?";
+
+            Regex DoubleNumber = new Regex(doubleNumberRegexStr, RegexOptions.Compiled);
+
             Match m = DoubleNumber.Match(buffer, position);
             if (m.Success)
             {
@@ -166,8 +185,22 @@ namespace Jhu.SqlServer.Array.Parser
             }
         }*/
 
-        private static Token MatchComplexNumber(ref string buffer, int position)
+        private static Token MatchComplexNumber(ref string buffer, int position, string decimalPoint)
         {
+            string decimalCharList ="";
+            foreach (char c in decimalPoint)
+            {
+                decimalCharList+=(@"\"+c);
+            }
+
+            string complexNumberRegexStr=   @"\G([-+]?[0-9]*" + 
+                                            decimalCharList + 
+                                            @"?[0-9]+(?:[eE][-+]?[0-9]+)?)(?:\s*([+-])\s*([-+]?[0-9]*" + 
+                                            decimalCharList + 
+                                            @"?[0-9]+(?:[eE][-+]?[0-9]+)?)i)?";
+
+            Regex ComplexNumber = new Regex(complexNumberRegexStr, RegexOptions.Compiled);
+
             Match m = ComplexNumber.Match(buffer, position);
             if (m.Success)
             {
